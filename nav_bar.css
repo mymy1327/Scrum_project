@@ -99,3 +99,117 @@
     align-items: center;
     gap: 20px;
 }
+.banner_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    border-top: #00B2FF 2px solid;
+}
+.banner_image {
+    width: 100vw;
+    max-width: none;
+    height: auto;
+    display: block;
+    z-index: 1;
+    margin-left: calc(50% - 50vw);
+}
+
+
+.banner_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(to bottom, rgba(0,178,255,0.6) 0%, rgba(0,178,255,0.2) 40%, rgba(0,178,255,0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+.banner_text_top,
+.banner_text_bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100px;
+    font-weight: 1000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1;
+    z-index: 3;
+}
+
+.banner_text_top {
+    top: 30%;
+    color: #5CCEFF;
+    transform: translateX(calc(-50% - 300px));
+}
+
+.banner_text_bottom {
+    top: 50%;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: visible;
+    transform: translateX(calc(-50% + 200px));
+}
+@media (max-width: 1000px) {
+    .banner_text_top,
+    .banner_text_bottom {
+        font-size: 60px;
+    }
+    .banner_text_top {
+        transform: translateX(calc(-50% - 200px));
+    }
+    .banner_text_bottom {
+        transform: translateX(calc(-50% + 100px));
+    }
+}
+.warranty_container {
+    gap: 40px;
+    align-items: center;
+    z-index: 4;
+    height: 20%;
+    position: absolute;
+    top: 85%;
+    width: 70%;
+    background-color: #00B2FF;
+    text-align: start;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 50px 0%;
+}
+.delivery_text h3, .support_text h3, .warranty_text h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    padding-top: 10px;
+    white-space: nowrap;
+    display: inline-block;
+}
+.delivery_text p, .support_text p, .warranty_text p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 14px;
+    padding-bottom: 10px;   
+    white-space: nowrap;
+    display: inline-block;
+}
+.bxs-truck, .bxs-message-circle, .bxs-medal-star-alt {
+    font-size: 40px;
+    color: black;
+    padding-left: 15px;
+}
+.delivery, .interest, .warranty {
+    display: flex;
+    padding: 10px;
+    border: black 1px solid;
+    border-radius: 50px;
+    width: 25%;
+}
