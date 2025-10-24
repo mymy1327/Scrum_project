@@ -4,14 +4,15 @@
         const searchResults = document.getElementById('search-results');
 
         // Dữ liệu mẫu để tìm kiếm
-        const sampleData = [
-            "Kết quả tìm kiếm số 1",
-            "Kết quả tìm kiếm số 2",
-            "Sản phẩm A",
-            "Dịch vụ B",
-            "Tin tức mới",
-            "Liên hệ với chúng tôi"
-        ];
+        let sampleData = [];
+        fetch('data.json')
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            sampleData = data;
+            displayInfo(sampleData);
+        })
 
         /**
          * Xử lý sự kiện khi người dùng nhập liệu (oninput)
