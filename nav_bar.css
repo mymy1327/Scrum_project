@@ -1,3 +1,67 @@
+@media (max-width: 1000px) {
+    /* Center and scale banner text on small screens */
+    .banner_text_top,
+    .banner_text_bottom {
+        font-size: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: normal; /* allow wrapping if needed on very small screens */
+        text-align: center;
+    }
+    .banner_text_top { top: 25%; }
+    .banner_text_bottom { top: 45%; }
+
+    /* Make warranty container flow and expand on small screens so content doesn't overflow */
+    .warranty_container {
+        height: auto !important;
+        padding: 12px !important;
+        display: flex;
+        gap: 10px;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+
+    /* Stack each warranty pill and ensure its content fits */
+    .delivery, .interest, .warranty, .support {
+        padding: 10px !important;
+        box-sizing: border-box;
+        flex-wrap: nowrap;
+    }
+
+    /* Make headings and paragraphs wrap and reduce size for mobile */
+    .delivery_text h3, .support_text h3, .warranty_text h3 {
+        font-size: 10px !important;
+        white-space: normal !important;
+        text-align: left;
+        margin-bottom: 4px;
+    }
+    .delivery_text p, .support_text p, .warranty_text p {
+        font-size: 12px !important;
+        white-space: normal !important;
+        text-align: left;
+    }
+    .line_container{
+        margin-top: 100px !important;
+    }
+    .special_text {
+        font-size: 80px !important;
+        top: 50% !important;
+        transform: translate(-37%, -40%) !important;
+    }
+    .line {
+        height: 40px !important;
+    }
+    .purchase_text {
+    font-size: 25px !important;
+    top: 50% !important;
+    transform: translate(23%, 5%) !important;
+    }
+    .free_text {
+    font-size: 20px !important;
+    top: 50% !important;
+    transform: translate(-15%, 15%) !important;
+}
+}
 .welcome_text {
     height: 30px;
     width: 100%;
@@ -168,12 +232,22 @@
     .banner_text_bottom {
         transform: translateX(calc(-50% + 100px));
     }
+    .bxs-truck, .bxs-message-circle, .bxs-medal-star-alt {
+        font-size: 20px;
+        margin-left: 0; 
+    }
+    .delivery_text h3, .support_text h3, .warranty_text h3 {
+        font-size: 12px;
+    }
+    .delivery_text p, .support_text p, .warranty_text p {
+        font-size: 10px;
+    }
 }
 .warranty_container {
     gap: 40px;
     align-items: center;
     z-index: 4;
-    height: 20%;
+    height: 25%;
     position: absolute;
     top: 85%;
     width: 70%;
@@ -187,29 +261,114 @@
     font-weight: bold;
     color: white;
     margin: 0;
-    font-size: 16px;
-    padding-top: 10px;
-    white-space: nowrap;
-    display: inline-block;
+    font-size: 25px;
+    white-space: normal;
+    display: block;
 }
 .delivery_text p, .support_text p, .warranty_text p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     margin: 0;
-    font-size: 14px;
-    padding-bottom: 10px;   
-    white-space: nowrap;
-    display: inline-block;
+    font-size: 20px;
+    white-space: normal;
+    display: block;
 }
 .bxs-truck, .bxs-message-circle, .bxs-medal-star-alt {
     font-size: 40px;
     color: black;
-    padding-left: 15px;
+    flex: 0 0 auto;
+    margin-right: 8px;
 }
 .delivery, .interest, .warranty {
     display: flex;
-    padding: 10px;
-    border: black 1px solid;
+    align-items: center;
+    gap: 8px; /* reduced gap between icon and text */
+    padding: 10px 12px; /* tighter padding so border hugs content */
+    border: 1px solid black;
     border-radius: 50px;
     width: 25%;
+    box-sizing: border-box;
+}
+.delivery_text, .support_text, .warranty_text {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    flex: 1 1 auto;
+    overflow-wrap: anywhere; /* allow long words to break inside the pill */
+    word-break: break-word;
+}
+
+/* Override Bootstrap grid column sizing inside the small warranty boxes so icon and text stay inside the border */
+.delivery > [class*="col-"], .interest > [class*="col-"], .warranty > [class*="col-"] {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    padding: 0 !important; /* remove extra padding from bootstrap columns inside these small boxes */
+}
+
+.delivery > i[class], .interest > i[class], .warranty > i[class] {
+    width: auto !important;
+    flex: 0 0 auto !important;
+}
+
+.delivery > .delivery_text, .interest > .support_text, .warranty > .warranty_text {
+    width: auto !important;
+    flex: 1 1 auto !important;
+}
+
+/* Keep icon + text on the same row for warranty items */
+.delivery, .interest, .warranty {
+    flex-direction: row; /* explicit */
+    flex-wrap: nowrap;   /* prevent icon/text wrapping to next line */
+    min-width: 0;        /* allow flex children to shrink inside parent */
+}
+
+.delivery > i[class], .interest > i[class], .warranty > i[class] {
+    display: block !important;
+    flex: 0 0 auto !important;
+    margin-right: 12px !important;
+}
+
+.delivery_text, .support_text, .warranty_text {
+    min-width: 0; /* important so text can shrink/wrap inside flex container */
+}
+.line_container{
+    margin-top: 200px;
+    height: auto;
+    text-align: center;
+    position: relative;
+}
+.line {
+    background-color: #005275;
+    position: absolute;
+    height: 50px;
+    z-index: 0;
+}
+.special_text {
+    z-index: 1;
+    position: absolute;
+    font-family: Mea Culpa;
+    font-size: 100px;
+    top: 50%;
+    transform: translate(-37%, -40%);
+}
+.purchase_text {
+    z-index: 1;
+    color: white;
+    font-family: Mea Culpa;
+    z-index: 1;
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    transform: translate(23%, 0%);
+}
+.free_text {
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1;
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    transform: translate(-15%, 15%);
 }
