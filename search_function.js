@@ -59,14 +59,13 @@
             //ket qua moi
             results.forEach(result => {
                 const li = document.createElement('li');
-                li.classList.add('container row');
-                searchResults.appendChild(li);
+                li.classList.add('container', 'row');
                 const img = document.createElement('img');
-                img.classList.add('result_picture col-3');
+                img.classList.add('result_picture', 'col-3');
                 img.src = `${result.picture}`;
                 li.appendChild(img);
                 const div = document.createElement('div');
-                div.classList.add('result_name_price col-6');
+                div.classList.add('result_name_price', 'col-6');
                 li.appendChild(div);
                 const h3 = document.createElement('h3');
                 h3.textContent = `${result.name}`;
@@ -74,6 +73,7 @@
                 const p = document.createElement('p');
                 p.textContent = `${result.price}`;
                 div.appendChild(p);
+                searchResults.appendChild(li);
             });
 
         }

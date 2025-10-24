@@ -3,5 +3,35 @@
         "picture": "guitar.png",
         "name": "Guitar",
         "price": "500 euro"
+    },
+    {
+        "picture":"drums.png",
+        "name":"Drum",
+        "price": "1200 euro"
+    },
+    {
+        "picture":"electricguitar.png",
+        "name":"Electric Guitar",
+        "price":"700 euro"
+    },
+    {
+        "picture":"loudspeakers.png",
+        "name":"Speaker",
+        "price":"1500 euro"
+    },
+    {
+        "picture":"microphone.png",
+        "name":"Microphone",
+        "price":"600 euro"
+    },
+    {
+        "picture":"piano.png",
+        "name":"Piano",
+        "price":"3000 euro"
+    },
+    {
+        "picture":"redDrums.png",
+        "name":"Red Drums",
+        "price":"2400 euro"
     }
 ]

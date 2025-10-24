@@ -144,6 +144,7 @@
     display: none; 
 }
 .search-results li {
+    transform: translateX(11px);
     padding: 10px;
     border-bottom: 1px solid #eee;
     cursor: pointer;
