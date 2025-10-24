@@ -1,5 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 footer {
@@ -8,27 +9,47 @@ footer {
     padding: 20px 100px;
 }
 
-.titles {
-  display: flex;
-  gap: 120px;
-  margin-left: 300px;
-}
-
 .container {
   display: flex;
-  gap: 80px; 
+  gap: 120px; 
+  border-bottom: 2px solid rgb(187, 187, 187);
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .Pages_content, .BackLinks_content, .WorkHours_content, .text{
     display: flex;
     flex-direction: column;
     font-size: 13px;
+    margin-bottom: 30px;
 }
 
 .low {
-    margin-top: 50px;
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+
 }
 
 img {
   width: 140px;
+}
+
+.icon {
+  display: flex;
+  gap: 10px;
+}
+
+.hour{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.phone{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
 }
