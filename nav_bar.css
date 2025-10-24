@@ -5,13 +5,12 @@
         font-size: 36px;
         left: 50%;
         transform: translateX(-50%);
-        white-space: normal; /* allow wrapping if needed on very small screens */
+        white-space: normal;
         text-align: center;
     }
     .banner_text_top { top: 25%; }
     .banner_text_bottom { top: 45%; }
 
-    /* Make warranty container flow and expand on small screens so content doesn't overflow */
     .warranty_container {
         height: auto !important;
         padding: 12px !important;
@@ -21,14 +20,11 @@
         border-radius: 12px;
     }
 
-    /* Stack each warranty pill and ensure its content fits */
     .delivery, .interest, .warranty, .support {
         padding: 10px !important;
         box-sizing: border-box;
         flex-wrap: nowrap;
     }
-
-    /* Make headings and paragraphs wrap and reduce size for mobile */
     .delivery_text h3, .support_text h3, .warranty_text h3 {
         font-size: 10px !important;
         white-space: normal !important;
@@ -81,19 +77,18 @@
     padding-bottom: 35px;
 }
 .nav .nav-link {
-    color: #00121A; /* base color for nav links */
+    color: #00121A;
 }
 
 .nav .nav-link:hover,
 .nav .nav-link:focus {
-    color: #005275; /* hover/focus color */
+    color: #005275;
 }
 
 .nav .nav-link.active {
-    color: #005275; /* active link color */
+    color: #005275;
 }
 
-/* dropdown items (bootstrap adds .dropdown-item) */
 .dropdown-item {
     color: #00121A;
 }
@@ -282,8 +277,8 @@
 .delivery, .interest, .warranty {
     display: flex;
     align-items: center;
-    gap: 8px; /* reduced gap between icon and text */
-    padding: 10px 12px; /* tighter padding so border hugs content */
+    gap: 8px;
+    padding: 10px 12px;
     border: 1px solid black;
     border-radius: 50px;
     width: 25%;
@@ -294,15 +289,13 @@
     flex-direction: column;
     width: auto;
     flex: 1 1 auto;
-    overflow-wrap: anywhere; /* allow long words to break inside the pill */
+    overflow-wrap: anywhere;
     word-break: break-word;
 }
-
-/* Override Bootstrap grid column sizing inside the small warranty boxes so icon and text stay inside the border */
 .delivery > [class*="col-"], .interest > [class*="col-"], .warranty > [class*="col-"] {
     width: auto !important;
     flex: 0 0 auto !important;
-    padding: 0 !important; /* remove extra padding from bootstrap columns inside these small boxes */
+    padding: 0 !important;
 }
 
 .delivery > i[class], .interest > i[class], .warranty > i[class] {
@@ -315,11 +308,10 @@
     flex: 1 1 auto !important;
 }
 
-/* Keep icon + text on the same row for warranty items */
 .delivery, .interest, .warranty {
-    flex-direction: row; /* explicit */
-    flex-wrap: nowrap;   /* prevent icon/text wrapping to next line */
-    min-width: 0;        /* allow flex children to shrink inside parent */
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    min-width: 0;
 }
 
 .delivery > i[class], .interest > i[class], .warranty > i[class] {
@@ -329,7 +321,7 @@
 }
 
 .delivery_text, .support_text, .warranty_text {
-    min-width: 0; /* important so text can shrink/wrap inside flex container */
+    min-width: 0;
 }
 .line_container{
     margin-top: 200px;
