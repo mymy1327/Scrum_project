@@ -11,7 +11,6 @@
         })
         .then(data => {
             sampleData = data;
-            displayInfo(sampleData);
         })
 
         /**
@@ -26,9 +25,11 @@
                 searchResults.style.display = 'block';
 
                 // Lọc dữ liệu mẫu
-                const filteredResults = sampleData.filter(item =>
-                    item.toLowerCase().includes(query)
-                );
+                const filteredResults = sampleData.filter(item => {
+                    const itemName = item.name ? item.name.toLowerCase() : '';
+
+                    return itemName.includes(query);
+                });
 
                 // Cập nhật kết quả tìm kiếm
                 renderResults(filteredResults);
@@ -55,12 +56,26 @@
                 return;
             }
 
-            // Thêm các kết quả mới
+            //ket qua moi
             results.forEach(result => {
                 const li = document.createElement('li');
-                li.textContent = result;
+                li.classList.add('container row');
                 searchResults.appendChild(li);
+                const img = document.createElement('img');
+                img.classList.add('result_picture col-3');
+                img.src = `${result.picture}`;
+                li.appendChild(img);
+                const div = document.createElement('div');
+                div.classList.add('result_name_price col-6');
+                li.appendChild(div);
+                const h3 = document.createElement('h3');
+                h3.textContent = `${result.name}`;
+                div.appendChild(h3);
+                const p = document.createElement('p');
+                p.textContent = `${result.price}`;
+                div.appendChild(p);
             });
+
         }
         
         // Tùy chọn: Ẩn lớp phủ và kết quả khi click bên ngoài (ví dụ: click vào lớp phủ)
@@ -69,20 +84,3 @@
             searchResults.style.display = 'none';
             searchInput.value = ''; // Xóa nội dung tìm kiếm
         });
-        // Thêm hàm này vào trong thẻ <script>
-    function performSearch() {
-    // Khi người dùng bấm nút, ta buộc gọi hàm handleSearch() 
-    // để hiển thị lớp phủ và kết quả (nếu có nội dung)
-    handleSearch(); 
-    
-    // Bạn có thể thêm logic tìm kiếm chuyên sâu hơn tại đây, 
-    // ví dụ: gửi yêu cầu tìm kiếm đến máy chủ.
-    
-    // Hiện tại, ta chỉ cần đảm bảo lớp phủ và kết quả được hiển thị
-    const query = searchInput.value.trim();
-    if (query.length > 0) {
-        alert(`Bạn đang tìm kiếm: ${query}`); 
-    } else {
-        alert("Vui lòng nhập từ khóa tìm kiếm.");
-    }
-}
