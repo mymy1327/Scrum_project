@@ -1,9 +1,8 @@
-        // Lấy các phần tử cần thiết
         const searchInput = document.getElementById('search-input');
         const overlay = document.getElementById('overlay');
         const searchResults = document.getElementById('search-results');
 
-        // Dữ liệu mẫu để tìm kiếm
+        //Take information from json
         let sampleData = [];
         fetch('data.json')
         .then(response => {
@@ -13,40 +12,36 @@
             sampleData = data;
         })
 
-        /**
-         * Xử lý sự kiện khi người dùng nhập liệu (oninput)
-         */
+        //Search for products
         function handleSearch() {
             const query = searchInput.value.trim().toLowerCase();
 
             if (query.length > 0) {
-                // Hiển thị lớp phủ và kết quả
+                // Show overlay and results
                 overlay.style.display = 'block';
                 searchResults.style.display = 'block';
 
-                // Lọc dữ liệu mẫu
+                // filter 
                 const filteredResults = sampleData.filter(item => {
                     const itemName = item.name ? item.name.toLowerCase() : '';
 
                     return itemName.includes(query);
                 });
 
-                // Cập nhật kết quả tìm kiếm
                 renderResults(filteredResults);
             } else {
-                // Ẩn lớp phủ và kết quả khi ô tìm kiếm trống
                 overlay.style.display = 'none';
                 searchResults.style.display = 'none';
-                // Xóa các kết quả cũ
+
                 searchResults.innerHTML = '';
             }
         }
 
         /**
-         * Hàm hiển thị kết quả tìm kiếm vào thẻ <ul>
+         * Add result into <ul> element
          */
         function renderResults(results) {
-            // Xóa kết quả cũ
+
             searchResults.innerHTML = '';
 
             if (results.length === 0) {
@@ -56,7 +51,6 @@
                 return;
             }
 
-            //ket qua moi
             results.forEach(result => {
                 const li = document.createElement('li');
                 li.classList.add('container', 'row');
@@ -78,9 +72,9 @@
 
         }
         
-        // Tùy chọn: Ẩn lớp phủ và kết quả khi click bên ngoài (ví dụ: click vào lớp phủ)
+        // erase results when click out
         overlay.addEventListener('click', () => {
             overlay.style.display = 'none';
             searchResults.style.display = 'none';
-            searchInput.value = ''; // Xóa nội dung tìm kiếm
+            searchInput.value = '';
         });

@@ -2,36 +2,36 @@
     {
         "picture": "guitar.png",
         "name": "Guitar",
-        "price": "500 euro"
+        "price": "500 €"
     },
     {
         "picture":"drums.png",
         "name":"Drum",
-        "price": "1200 euro"
+        "price": "1200 €"
     },
     {
         "picture":"electricguitar.png",
         "name":"Electric Guitar",
-        "price":"700 euro"
+        "price":"700 €"
     },
     {
         "picture":"loudspeakers.png",
         "name":"Speaker",
-        "price":"1500 euro"
+        "price":"1500 €"
     },
     {
         "picture":"microphone.png",
         "name":"Microphone",
-        "price":"600 euro"
+        "price":"600 €"
     },
     {
         "picture":"piano.png",
         "name":"Piano",
-        "price":"3000 euro"
+        "price":"3000 €"
     },
     {
         "picture":"redDrums.png",
         "name":"Red Drums",
-        "price":"2400 euro"
+        "price":"2400 €"
     }
 ]
