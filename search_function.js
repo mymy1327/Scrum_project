@@ -46,7 +46,7 @@
 
             if (results.length === 0) {
                 const li = document.createElement('li');
-                li.textContent = "Không tìm thấy kết quả phù hợp.";
+                li.textContent = "No results.";
                 searchResults.appendChild(li);
                 return;
             }
