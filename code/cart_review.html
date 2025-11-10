@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart review</title>
+    <link rel="stylesheet" href="cart_review.css">
+</head>
+<body>
+    <header>
+        <h1>Shopping cart</h1>
+    </header>
+    
+    <main class="cart">
+        <div class="cart-item">
+            <img src="redDrums.png" alt="redDrums">
+            <div class="item-info">
+                <h2>Red Pearl Drums</h2>
+                <p class="price">2 000€</p>
+                <label>
+                    <input type="number" class="quantity" value="1" min="1">
+                </label>
+            </div>
+            <button class="remove">Remove</button>
+        </div>
+
+
+        <div class="cart-item">
+            <img src="electricguitar.png" alt="electricGuitar">
+            <div class="item-info">
+                <h2>Electric Guitar</h2>
+                <p class="price">2 000€</p>
+                <label>
+                    <input type="number" class="quantity" value="1" min="1">
+                </label>
+            </div>
+            <button class="remove">Remove</button>
+        </div>
+
+        <div class="cart-item">
+            <img src="loudspeakers.png" alt="loudSpeakers">
+            <div class="item-info">
+                <h2>Loud Speakers</h2>
+                <p class="price">2 000€</p>
+                <label>
+                    <input type="number" class="quantity" value="1" min="1">
+                </label>
+            </div>
+            <button class="remove">Remove</button>
+        </div>       
+        
+        <div class="cart-total">
+            <h3 id="total">0€</h3>
+            <button id="Checkout">Checkout</button>
+        </div>    
+    </main>
+
+</body>
+</html>
