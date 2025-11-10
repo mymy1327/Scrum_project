@@ -1,4 +1,4 @@
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     /* Center and scale banner text on small screens */
     .banner_text_top,
     .banner_text_bottom {
@@ -148,7 +148,6 @@
     transform: translateX(11px);
     padding: 10px;
     border-bottom: 1px solid #eee;
-    cursor: pointer;
 }
 .search_bar_form {
     display: flex;
@@ -408,4 +407,11 @@ body {
 .search-results li p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
+}
+.bx-flip-horizontal {
+    font-size: xx-large;
+    color: #5CCEFF;
+    z-index: 1001;
+    cursor: pointer;
+    align-self: center;
 }
