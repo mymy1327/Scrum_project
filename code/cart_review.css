@@ -32,6 +32,7 @@ body {
     border-radius: 8px;
     border: none;
     color: white;
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 80px;
@@ -41,4 +42,8 @@ body {
 .quantity {
     border: none;
     width: 30px;
+}
+
+.remove:hover {
+    cursor: pointer;
 }
