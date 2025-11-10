@@ -87,6 +87,13 @@
         // adding products into cart page
         function addToCart(product) {
             const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
-            cart.push(product);
+            const existingProduct = cart.find(item => item.name === product.name);
+
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                product.quantity = 1;
+                cart.push(product);
+            }
             localStorage.setItem('cartItems', JSON.stringify(cart));
         }
