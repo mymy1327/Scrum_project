@@ -31,8 +31,9 @@ footer {
 
 }
 
-img {
+.text img{
   width: 140px;
+  cursor: pointer;
 }
 
 .icon {
@@ -70,7 +71,7 @@ img {
 }
 
 .Pages_content p a:hover, .BackLinks_content p a:hover{
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .low small a{
@@ -79,5 +80,13 @@ img {
 }
 
 .low small a:hover{
-  opacity: 0.5;
+  opacity: 0.8;
+}
+
+.icon a{
+  color: white;
+}
+
+.icon a:hover{
+  opacity: 0.8;
 }
