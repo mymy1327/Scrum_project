@@ -7,6 +7,11 @@ hr {
     width: 90%;
     height: 0.5px;
     background-color: black;
+    margin-left: 5%;
+}
+
+.edit {
+    margin-top: 6%;
 }
 
 /* Adjustements of the main texts, like best seller, about us, etc */
