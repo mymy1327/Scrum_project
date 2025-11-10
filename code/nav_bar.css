@@ -192,12 +192,10 @@
     border-top: #00B2FF 2px solid;
 }
 .banner_image {
-    width: 100vw;
-    max-width: none;
+    width: 100%;
     height: auto;
     display: block;
     z-index: 1;
-    margin-left: calc(50% - 50vw);
 }
 .banner_container::before {
     content: '';
@@ -227,7 +225,7 @@
 .banner_text_top {
     top: 30%;
     color: #5CCEFF;
-    transform: translateX(calc(-50% - 300px));
+    transform: translateX(calc(-50% - 100px));
 }
 
 .banner_text_bottom {
@@ -237,7 +235,7 @@
     white-space: nowrap;
     display: inline-block;
     overflow: visible;
-    transform: translateX(calc(-50% + 200px));
+    transform: translateX(calc(-50% + 50px));
 }
 @media (max-width: 1000px) {
     .banner_text_top,
