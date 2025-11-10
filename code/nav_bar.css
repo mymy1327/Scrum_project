@@ -2,7 +2,7 @@
     /* Center and scale banner text on small screens */
     .banner_text_top,
     .banner_text_bottom {
-        font-size: 36px;
+        font-size: 20px;
         left: 50%;
         transform: translateX(-50%);
         white-space: normal;
@@ -71,10 +71,11 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .logo {
+    width: 15%;
     float: left;
+    align-self: center;
     padding-right: 20px;
     padding-left: 40px; 
-    padding-bottom: 35px;
 }
 .nav .nav-link {
     color: #00121A;
@@ -358,7 +359,7 @@
 .special_text {
     z-index: 1;
     position: absolute;
-    font-family: Mea Culpa;
+    font-family: 'Mea Culpa';
     font-size: 100px;
     top: 50%;
     transform: translate(-37%, -40%);
