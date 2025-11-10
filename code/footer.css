@@ -3,6 +3,7 @@ body {
     margin: 0;
 }
 
+/* Display adjustments with links and others */
 footer {
     background-color: rgb(52, 52, 52);
     color: white;
@@ -17,7 +18,8 @@ footer {
   margin: 0 auto;
 }
 
-.Pages_content, .BackLinks_content, .WorkHours_content, .text{
+/* Pages, Back Links, Work Hours */
+.Pages_content, .BackLinks_content, .WorkHours_content, .text {
     display: flex;
     flex-direction: column;
     font-size: 13px;
@@ -31,25 +33,65 @@ footer {
 
 }
 
-img {
+/* Logo size */
+.text img {
   width: 140px;
 }
 
+/* Social media icons */
 .icon {
   display: flex;
   gap: 10px;
 }
 
-.hour{
+/* Work hours */
+.hour {
   display: flex;
   align-items: center;
   gap: 10px;
 
 }
 
-.phone{
+.hour p {
+  margin: 0 auto;
+  margin-left: 0%;
+}
+
+.phone p {
+  margin: 0 auto;
+  margin-left: 0%;
+}
+
+.phone {
   display: flex;
   align-items: center;
   gap: 10px;
 
+}
+
+/* Link editing */
+.Pages_content a, .BackLinks_content a {
+  color: white;
+  text-decoration: none;
+}
+
+.Pages_content p a:hover, .BackLinks_content p a:hover {
+  opacity: 0.8;
+}
+
+.low small a {
+  color: white;
+  text-decoration: none;
+}
+
+.low small a:hover {
+  opacity: 0.8;
+}
+
+.icon a {
+  color: white;
+}
+
+.icon a:hover {
+  opacity: 0.8;
 }
