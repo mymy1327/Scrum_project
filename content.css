@@ -103,3 +103,50 @@ p {
     object-fit: contain;
     background-color: #E6F7FF;
 }
+
+.container2 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    margin: 0 5% 5%;
+}
+
+#room {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.image-text {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container2 {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .image-text {
+        max-width: 70%;
+        margin-left: 5%;
+    }
+
+    .text-section h2 {
+        margin-left: 5%;
+    }
+}
