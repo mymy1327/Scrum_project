@@ -9,9 +9,9 @@ footer {
     padding: 20px 100px;
 }
 
-.container {
+.footer-container {
   display: flex;
-  gap: 120px; 
+  gap: 120px;
   border-bottom: 2px solid rgb(187, 187, 187);
   justify-content: center;
   margin: 0 auto;
