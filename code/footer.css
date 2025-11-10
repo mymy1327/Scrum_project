@@ -47,9 +47,28 @@ img {
 
 }
 
+.hour p{
+  margin: 0 auto;
+  margin-left: 0%;
+}
+
+.phone p{
+  margin: 0 auto;
+  margin-left: 0%;
+}
+
 .phone{
   display: flex;
   align-items: center;
   gap: 10px;
 
+}
+
+.Pages_content a, .BackLinks_content a{
+  color: white;
+}
+
+.Pages_content p a:hover, .BackLinks_content p a:hover{
+  text-decoration: underline;
+  opacity: 0.5;
 }
