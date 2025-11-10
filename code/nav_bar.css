@@ -248,9 +248,9 @@
     .banner_text_bottom {
         transform: translateX(calc(-50% + 100px));
     }
-    .bxs-truck, .bxs-message-circle, .bxs-medal-star-alt {
+    .bxs-truck, .bx-chat, .bx-badge-check {
         font-size: 20px;
-        margin-left: 0; 
+        margin-left: 0;
     }
     .delivery_text h3, .support_text h3, .warranty_text h3 {
         font-size: 12px;
@@ -289,7 +289,7 @@
     white-space: normal;
     display: block;
 }
-.bxs-truck, .bxs-message-circle, .bxs-medal-star-alt {
+.bxs-truck, .bx-chat, .bx-badge-check {
     font-size: 40px;
     color: black;
     flex: 0 0 auto;
