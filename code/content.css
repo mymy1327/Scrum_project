@@ -2,18 +2,21 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Line */
 hr {
     width: 90%;
     height: 0.5px;
     background-color: black;
 }
 
+/* Adjustements of the main texts, like best seller, about us, etc */
 .title {
     margin-left: 5%;
     margin-bottom: -0.2%;
     font-weight: 650;
 }
 
+/* Shop by categories */
 .koko {
     display: flex;
     justify-content: center;
@@ -80,6 +83,7 @@ hr {
     width: 130px;
 }
 
+/* Card adjustments */
 .card {
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -103,7 +107,9 @@ hr {
     object-fit: contain;
     background-color: #E6F7FF;
 }
+/* Card adjustments end */
 
+/* About us */
 .container2 {
     display: grid;
     align-items: center;
