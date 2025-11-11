@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const removeButton = document.createElement('button');
                 removeButton.classList.add('remove');
                 removeButton.setAttribute('data-product-name', item.name);
-                removeButton.textContent = 'Remove';
+                removeButton.innerHTML = "<i class='bx bxs-trash-alt' style='color:#000000'></i>";
                 li.appendChild(removeButton);
 
                 productList.appendChild(li);

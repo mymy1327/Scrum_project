@@ -178,6 +178,9 @@
     margin-left: 20px;
     align-self: center;
 }
+.bxs-cart:hover, .bxs-user:hover {
+    color: #4fb6e2;
+}
 .cart_login {
     display: flex;
     align-items: center;
@@ -415,4 +418,7 @@ body {
     z-index: 1001;
     cursor: pointer;
     align-self: center;
+}
+.bx-flip-horizontal:hover {
+    color: #4fb6e2;
 }
