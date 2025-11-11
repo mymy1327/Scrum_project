@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 // adding products into cart page
         const productList = document.getElementById('product-list');
+        
         const selectedProducts = JSON.parse(localStorage.getItem('cartItems')) || [];
             // show products in cart page
 
@@ -47,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const removeButton = document.createElement('button');
                 removeButton.classList.add('remove');
                 removeButton.setAttribute('data-product-name', item.name);
-                removeButton.textContent = 'Remove';
+                removeButton.textContent = ''; 
+                removeButton.classList.add('remove'); 
                 li.appendChild(removeButton);
 
                 productList.appendChild(li);

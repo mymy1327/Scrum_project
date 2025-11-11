@@ -23,8 +23,15 @@ body {
 }
 
 .remove {
-    background-color: white;
-    border-radius: 8px;   
+    background-image: url('remove.png');
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;  
 }
 
 #Checkout {
