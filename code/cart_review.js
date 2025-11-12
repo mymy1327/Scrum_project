@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('cartItems', JSON.stringify(updatedCart));
             renderCartItems(updatedCart);
         }
+        
+        //sum function for total prices
+
+        function calculateTotal(cartItem) {
+            let total = 0;
+            cartItem.forEach(item => {
+                const price = parseFloat(item.price.replace('$', ''));
+                total += price * item.quantity;
+            });
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        }
 
         function renderCartItems(selectedProducts) {
             productList.innerHTML = '';
@@ -61,4 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         renderCartItems(selectedProducts);
+        calculateTotal(selectedProducts);
         });
+
+        
