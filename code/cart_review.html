@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="nav_bar.css">
     <link rel="icon" href="pictures/logo.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <!-- Logo shows next to the page title -->
     <link rel="icon" href="pictures/logo.png">
-</head>
+  </head>
 <body>
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
@@ -65,28 +69,85 @@
     <!-- Nav ends -->
     
     <!-- My cart -->
-    <div class="container">
-        <div id="root"></div>
-        <div class="sidebar">
-            <div class="head"><p>My Cart</p></div>
-            <div id="cartItem">
-                <ul id="product-list"></ul>
-            </div>
-            <div class="foot">
-                <h3>Total</h3>
-                <h2 id="total">0.00€</h2>
+    <div class="container2">
+      <div id="root"></div>
+      <div class="container mt-4">
+        <div class="delivery-form">
+          <!-- Form stars -->
+          <form>
+            <h2>Delivery</h2>
+            <div class="row">
+              <!-- Country dropdown -->
+              <div class="mb-3">
+                <label for="country"></label>
+                <select class="form-select" id="country" required>
+                  <option value="" disabled selected>Country</option>
+                  <option>Finland</option>
+                  <option>Sweden</option>
+                  <option>Norway</option>
+                  <option>Iceland</option>
+                  <option>Denmark</option>
+                  <option>UK</option>
+                  <option>France</option>
+                  <option>Spain</option>
+                  <option>Vietnam</option>
+                </select>
+              </div>
+              <!-- First and Last name on same line -->
+              <div class="col-md-6 mb-3">
+                <label for="first"></label>
+                <input type="text" class="form-control" id="first" placeholder="First name" name="first" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="last"></label>
+                <input type="text" class="form-control" id="last" placeholder="Last name" name="last" required>
+                </div>
+              </div>
+
+              <!-- Address full width -->
+              <div class="mb-3">
+                <label for="address"></label>
+                <input type="text" class="form-control" id="address" placeholder="Address" name="address" required>
+              </div>
+
+              <div class="row">
+                <!-- Postal code and City on same line -->
+                <div class="col-md-6 mb-3">
+                  <label for="postal"></label>
+                  <input type="number" class="form-control" id="postal" placeholder="Postal code" name="postal" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="city"></label>
+                  <input type="text" class="form-control" id="city" placeholder="City" name="city" required>
+                </div>
+              </div>
+
+            <!-- Phone on its own line -->
+              <div class="mb-3">
+                  <label for="phone"></label>
+                  <input type="number" class="form-control" id="phone" placeholder="Phone" name="phone" required>
+                </div>
+            </form>
+            <!-- Form ends -->
+        <!-- My cart things -->
+        </div>
+          </div>
+            <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem">
+                    <ul id="product-list"></ul>
+                </div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">0.00€</h2>
+                </div>
             </div>
         </div>
-    </div>
 
         <div class="cart-total">
-            <button id="Checkout" style="font-size: 17px;">Checkout ➙</button>
+            <button type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
         </div>
-<script src="cart_review.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script src="search_function.js"></script>
+  <script src="cart_review.js"></script>
+  <script src="search_function.js"></script>
 </body>
 </html>

@@ -6,10 +6,6 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .cart-item img {
@@ -38,14 +34,6 @@ body {
     gap: 2px;
     text-align: left;
     width: 100%;
-    font-size: 18px;
-}
-
-.item-info h2 {
-    font-size: 18px;
-}
-
-.item-info p {
     font-size: 18px;
 }
 
@@ -88,11 +76,17 @@ body {
     width: 30px;
 }
 
-.container {
+.item-info h2, .item-info p, .foot h2, .foot h3 {
+    font-size: 18px;
+}
+
+.container2 {
     display: flex;
-    width: 70%;
-    margin-bottom: 30px;
-    margin-top: 5%;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 5% 0 0 5%;
+    gap: 20px;
 }
 
 #root {
@@ -121,7 +115,7 @@ body {
 
 /* Products card with gray background */
 .sidebar{
-    width: 40%;
+    width: 60%;
     border-radius: 5px;
     background-color: #eee;
     margin-left: 20px;
@@ -138,21 +132,13 @@ body {
     border-top: 1px solid #333;
 }
 
-.foot h3 {
-    font-size: 18px;
-}
-
-.foot h2 {
-    font-size: 18px;
-}
-
 /* Responsive for different devices */
 @media (max-width: 768px) {
     body {
         padding: 10px;
     }
 
-    .container {
+    .container2 {
         flex-direction: column;
         width: 95%;
         margin-top: 10px;
@@ -194,4 +180,29 @@ body {
     .quantity {
         width: 50px;
     }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .delivery-form, .sidebar {
+        width: 100%;
+    }
+}
+
+/* Form section styling */
+.delivery-form {
+    width: 100%;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-left: 0;
+}
+
+/* Location of container (I want it to the left and slightly up so it is in line with 'my cart' but it doesn't work for some reason) */
+.container {
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
 }
