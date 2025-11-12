@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const updatedCart = cartItems.filter(item => item.name !== product);
             localStorage.setItem('cartItems', JSON.stringify(updatedCart));
             renderCartItems(updatedCart);
+            calculateTotal(updatedCart);
         }
         
         //sum function for total prices
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const price = parseFloat(item.price.replace('$', ''));
                 total += price * item.quantity;
             });
-            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            document.getElementById('total').textContent = `€${total.toFixed(2)}`;
         }
 
         function renderCartItems(selectedProducts) {
