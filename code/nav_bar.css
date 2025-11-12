@@ -57,6 +57,11 @@
     top: 50% !important;
     transform: translate(-15%, 15%) !important;
 }
+    .logo {
+        max-width: 150px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 }
 .welcome_text {
     height: 30px;
@@ -71,11 +76,14 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .logo {
-    width: 15%;
-    float: left;
+    max-width: 250px;
     align-self: center;
     padding-right: 20px;
     padding-left: 40px; 
+}
+.nav_bar_container > a {
+    align-self: center;
+    flex-shrink: 0;
 }
 .nav .nav-link {
     color: #00121A;
