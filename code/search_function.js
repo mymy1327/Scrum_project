@@ -72,6 +72,11 @@
                 li.appendChild(i);
                 i.addEventListener('click', () => {
                     addToCart(result);
+                    const notification = document.getElementById('notification');
+                    notification.classList.add('show');
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                    }, 2000);
                 });
                 searchResults.appendChild(li);
             });
