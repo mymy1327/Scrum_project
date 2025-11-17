@@ -76,13 +76,13 @@
       <div class="container">
         <div class="delivery-form">
           <!-- Form stars -->
-          <form>
+          <form action="save.php" method="post">
             <h2>Delivery</h2>
             <div class="row">
               <!-- Country dropdown -->
               <div class="mb-3">
                 <label for="country"></label>
-                <select class="form-select" id="country" required>
+                <select class="form-select" id="country" name="country"  required>
                   <option value="" disabled selected>Country</option>
                   <option>Finland</option>
                   <option>Sweden</option>
@@ -103,51 +103,50 @@
               <div class="col-md-6 mb-3">
                 <label for="last"></label>
                 <input type="text" class="form-control" id="last" placeholder="Last name" name="last" required>
-                </div>
               </div>
+            </div>
 
               <!-- Address full width -->
-              <div class="mb-3">
-                <label for="address"></label>
-                <input type="text" class="form-control" id="address" placeholder="Address" name="address" required>
-              </div>
+            <div class="mb-3">
+              <label for="address"></label>
+              <input type="text" class="form-control" id="address" placeholder="Address" name="address" required>
+            </div>
 
-              <div class="row">
-                <!-- Postal code and City on same line -->
-                <div class="col-md-6 mb-3">
-                  <label for="postal"></label>
-                  <input type="number" class="form-control" id="postal" placeholder="Postal code" name="postal" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="city"></label>
-                  <input type="text" class="form-control" id="city" placeholder="City" name="city" required>
-                </div>
+            <div class="row">
+              <!-- Postal code and City on same line -->
+              <div class="col-md-6 mb-3">
+                <label for="postal"></label>
+                <input type="text" class="form-control" id="postal" placeholder="Postal code" name="postal" required>
               </div>
+              <div class="col-md-6 mb-3">
+                <label for="city"></label>
+                <input type="text" class="form-control" id="city" placeholder="City" name="city" required>
+              </div>
+            </div>
 
             <!-- Phone on its own line -->
-              <div class="mb-3">
-                  <label for="phone"></label>
-                  <input type="number" class="form-control" id="phone" placeholder="Phone" name="phone" required>
-                </div>
-            </form>
-            <!-- Form ends -->
-             
-        <!-- My cart things -->
-        </div>
-          </div>
-          <div id="root"></div>
-            <div class="sidebar">
-                <div class="head"><p>My Cart</p></div>
-                <div id="cartItem">
+            <div class="mb-3">
+              <label for="phone"></label>
+              <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" required>
+            </div>
+            <!-- My cart things -->
+            </div>
+              </div>
+                <div id="root"></div>
+                  <div class="sidebar">
+                    <div class="head"><p>My Cart</p></div>
+                  <div id="cartItem">
                     <ul id="product-list"></ul>
-                </div>
-                <div class="foot">
+                  </div>
+                  <div class="foot">
                     <h3>Total</h3>
                     <h2 id="total">0.00€</h2>
-                </div> 
-                <button class='checkout' type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
+                  </div>
+                  <button class='checkout' type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
+              </div>
             </div>
-        </div>
+          </form>
+          <!-- Form ends -->
   <script src="cart_review.js"></script>
   <script src="search_function.js"></script>
 </body>
