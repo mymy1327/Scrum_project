@@ -1,3 +1,13 @@
+<?php
+session_start();
+ 
+// check if the user is logged in, if not then redirect to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: Navigation_bar.html");
+    exit;
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -65,7 +75,7 @@
     <!-- Cart and log in -->
       <div class="cart_login">
         <a href="cart_review.html"><i class='bx bxs-cart'></i></a>
-        <a href="login.php"><i class='bx bxs-user'></i></a>
+        <a href="logout.php"><i class='bx bx-arrow-out-left-square-half'></i></a>
       </div>
     </div>
     <!-- Banner -->

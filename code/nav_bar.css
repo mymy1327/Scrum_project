@@ -179,20 +179,16 @@
     display: flex;
     align-items: center;
     margin-right: 40px;
+    gap: 20px;
 }
-.bxs-cart, .bxs-user {
+.bxs-cart, .bxs-user, .bx-arrow-out-left-square-half {
     font-size: 30px;
     color: #5CCEFF;
     margin-left: 20px;
     align-self: center;
 }
-.bxs-cart:hover, .bxs-user:hover {
+.bxs-cart:hover, .bxs-user:hover, .bx-arrow-out-left-square-half:hover {
     color: #4fb6e2;
-}
-.cart_login {
-    display: flex;
-    align-items: center;
-    gap: 20px;
 }
 .banner_container {
     display: flex;

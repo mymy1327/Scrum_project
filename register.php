@@ -3,12 +3,14 @@ require_once "config.php";
 
 $username = $password = "";
 $username_err = $password_err = "";
+$opacity = "0";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     if(empty(trim($_POST["username"]))){
         $username_err = "Enter username";
+        $opacity = "1";
     } else{
         $username = trim($_POST["username"]);
     }
@@ -17,6 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $password_err = "Enter password";     
     } elseif(strlen(trim($_POST["password"])) < 6){
         $password_err = "Password needs to be at least 6 characters";
+        $opacity = "1";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -37,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             
             if(mysqli_stmt_execute($stmt)){
-                echo "Sign up sucessfully! You can <a href='login.php'>login</a> now.";
+                echo "<p>Sign up sucessfully! You can <a href='login.php'>login</a> now.</p>";
             } else{
                 echo "Error.";
             }
@@ -52,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <!DOCTYPE html>
 <html lang="fi">
-<head>
+<head>   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
@@ -69,10 +72,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <h1 class="main-text">Sign Up</h1>
-        <input class="user-input" type="text" name="username" value="<?php echo $username; ?>" placeholder="Username" required>
-        <span><?php echo $username_err; ?></span>
-        <input class="password-input" type="text" name="password" placeholder="Password" required>
-        <span><?php echo $password_err; ?></span>
+
+        <input class="user-input" type="text" name="username" placeholder="Username">
+        <span stlye="opacity: <?php echo $opacity; ?>"><?php echo $username_err; ?></span>
+
+        <input class="password-input" type="text" name="password" placeholder="Password">
+        <span stlye="opacity: <?php echo $opacity; ?>"><?php echo $password_err; ?></span>
+        
         <button class="submit-button" type="submit" value="sign up" >Sign up</button>
     </form>
 </body>

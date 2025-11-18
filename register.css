@@ -31,6 +31,7 @@ form {
     background-color: #4044ED;
     color: white;
     margin-top: 30px;
+    margin-bottom: 10px;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -40,4 +41,18 @@ form {
 ::placeholder {
     color: white;
     opacity: 0.7;
+}
+span {
+    color: red;
+    font-size: 15px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+p {
+    color: white;
+    font-size: 15px;
 }
