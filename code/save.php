@@ -1,13 +1,10 @@
 <?php
-
 // ---- DATABASE SETTINGS ----
 $host = "localhost";
 $dbname = "important";
-$user = "root";        // vaihda jos ei ole root
-$pass = "";            // lisää salasana jos on
 
 try {
-    // connect to database
+    // Connect to database
     $pdo = new PDO(
         "mysql:host=$host;dbname=$dbname;charset=utf8",
         $user,
@@ -18,23 +15,23 @@ try {
         ]
     );
 
-    // check if all fields exist
-    $required = ["country", "first", "last", "address", "postal", "city", "phone"];
+    // Check if all fields exist
+    $required = ["country", "first", "last", "address", "postal", "city", "phone", "products"];
     foreach ($required as $field) {
         if (!isset($_POST[$field]) || $_POST[$field] === "") {
             throw new Exception("Kenttä puuttuu: $field");
         }
     }
 
-    // prepare SQL
+    // Preparing SQL
     $stmt = $pdo->prepare("
         INSERT INTO orders 
-            (country, first_name, last_name, address, postal, city, phone)
+            (country, first_name, last_name, address, postal, city, phone, products)
         VALUES
-            (:country, :first_name, :last_name, :address, :postal, :city, :phone)
+            (:country, :first_name, :last_name, :address, :postal, :city, :phone, :products)
     ");
 
-    // execute insert
+    // Running SQL, inserting information
     $stmt->execute([
         ":country"    => $_POST["country"],
         ":first_name" => $_POST["first"],
@@ -42,13 +39,13 @@ try {
         ":address"    => $_POST["address"],
         ":postal"     => $_POST["postal"],
         ":city"       => $_POST["city"],
-        ":phone"      => $_POST["phone"]
+        ":phone"      => $_POST["phone"],
+        ":products" => $_POST["products"]
     ]);
 
     echo "<h2 style='font-family:Arial; color:green; text-align:center; margin-top:50px;'>
             Kiitos! Tilauksesi on vastaanotettu.
           </h2>";
-    echo "<p style='text-align:center;'>Voit sulkea tämän sivun.</p>";
 
 } catch (Exception $e) {
     echo "<h2 style='color:red;'>Virhe:</h2>";
