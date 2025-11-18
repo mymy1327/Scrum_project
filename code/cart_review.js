@@ -76,4 +76,28 @@ document.addEventListener('DOMContentLoaded', () => {
         calculateTotal(selectedProducts);
         });
 
-        
+        document.getElementById("Checkout").addEventListener("click", function(e) {
+            console.log("Checkout button clicked");
+            // estetään lomakkeen lähetys hetkeksi
+            e.preventDefault();
+
+            let items = [];
+
+            document.querySelectorAll("#product-list .cart-item").forEach(item => {
+                items.push({
+                    name: item.querySelector("h2").textContent,
+                    price: item.querySelector(".price").textContent,
+                    quantity: item.querySelector(".quantity").value
+                });
+            });
+
+            console.log("Collected items:", items);
+
+            // asetetaan hidden input
+            document.getElementById("products").value = JSON.stringify(items);
+            console.log("Products value set:", document.getElementById("products").value);
+
+            // lähetetään lomake nyt, kun products on täytetty
+            console.log("Submitting form");
+            this.closest("form").submit();
+        });
