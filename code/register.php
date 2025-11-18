@@ -69,9 +69,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <h1 class="main-text">Sign Up</h1>
-        <input class="user-input" type="text" placeholder="Username/Email" required>
-        <input class="password-input" type="text" placeholder="Password" required>
-        <button class="submit-button" type="submit">Sign up</button>
+        <input class="user-input" type="text" name="username" value="<?php echo $username; ?>" placeholder="Username" required>
+        <span><?php echo $username_err; ?></span>
+        <input class="password-input" type="text" name="password" placeholder="Password" required>
+        <span><?php echo $password_err; ?></span>
+        <button class="submit-button" type="submit" value="sign up" >Sign up</button>
     </form>
 </body>
 </html>
