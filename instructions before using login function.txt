@@ -1,0 +1,8 @@
+Create DATABASE user_controller.
+    CREATE DATABASE user_controller character set utf8 collate utf8_swedish_ci;
+Create table users.
+    CREATE TABLE users (
+        id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(50) NOT NULL UNIQUE,
+        password VARCHAR(255) NOT NULL
+    );
