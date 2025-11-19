@@ -181,13 +181,13 @@
     margin-right: 40px;
     gap: 20px;
 }
-.bxs-cart, .bxs-user, .bx-arrow-out-left-square-half {
-    font-size: 30px;
+.bxs-cart, .bxs-user, .bx-log-out{
+    font-size: 30px !important;
     color: #5CCEFF;
     margin-left: 20px;
     align-self: center;
 }
-.bxs-cart:hover, .bxs-user:hover, .bx-arrow-out-left-square-half:hover {
+.bxs-cart:hover, .bxs-user:hover, .bx-log-out {
     color: #4fb6e2;
 }
 .banner_container {

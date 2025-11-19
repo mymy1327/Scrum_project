@@ -11,10 +11,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["username"]))){
         $username_err = "Enter username";
         $opacity = "1";
-    } else{
-        $username = trim($_POST["username"]);
-    }
+    } else {
+        $new_username = trim($_POST["username"]);
+        $sql = "SELECT id FROM users WHERE username = ?";
 
+        if ($stmt = mysqli_prepare($conn, $sql)){
+            mysqli_stmt_bind_param($stmt, "s", $param_username);
+            $param_username = $new_username;
+            
+            if(mysqli_stmt_execute($stmt)){
+                mysqli_stmt_store_result($stmt);
+
+                if(mysqli_stmt_num_rows($stmt) > 0){
+                    //username exists
+                    $username_err = "This username has been used. Please choose another one.";
+                } else{
+                // username is available
+                $username = $new_username;
+                }
+    }}}
     if(empty(trim($_POST["password"]))){
         $password_err = "Enter password";     
     } elseif(strlen(trim($_POST["password"])) < 6){

@@ -27,7 +27,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
     <!-- Navigation Bar -->
-    <div class="welcome_text"><p class="welcome">Welcome to Nature Music!</p></div>
+    <div class="welcome_text"><p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p></div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.html">
     <img class="logo" src="pictures/logo.png" alt="Logo">
@@ -75,7 +75,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <!-- Cart and log in -->
       <div class="cart_login">
         <a href="cart_review.html"><i class='bx bxs-cart'></i></a>
-        <a href="logout.php"><i class='bx bx-arrow-out-left-square-half'></i></a>
+        <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
       </div>
     </div>
     <!-- Banner -->
