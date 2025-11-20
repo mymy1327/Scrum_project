@@ -2,36 +2,43 @@
     {
         "picture": "pictures/guitar.png",
         "name": "Guitar",
-        "price": "500 €"
+        "price": "500 €",
+        "category": "string-instruments"
     },
     {
         "picture":"pictures/drums.png",
         "name":"Drum",
-        "price": "1200 €"
+        "price": "1200 €",
+        "category": "drums"
     },
     {
         "picture":"pictures/electricguitar.png",
         "name":"Electric Guitar",
-        "price":"700 €"
+        "price":"700 €",
+        "category": "string-instruments"
     },
     {
         "picture":"pictures/loudspeakers.png",
         "name":"Speaker",
-        "price":"1500 €"
+        "price":"1500 €",
+        "category": "studio"
     },
     {
         "picture":"pictures/microphone.png",
         "name":"Microphone",
-        "price":"600 €"
+        "price":"600 €",
+        "category": "sound-audio"
     },
     {
         "picture":"pictures/piano.png",
         "name":"Piano",
-        "price":"3000 €"
+        "price":"3000 €",
+        "category": "keyboards"
     },
     {
         "picture":"pictures/redDrums.png",
         "name":"Red Drums",
-        "price":"2400 €"
+        "price":"2400 €",
+        "category": "drums"
     }
 ]
