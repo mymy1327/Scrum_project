@@ -53,7 +53,7 @@ try {
     <!-- Navigation Bar -->
     <div class="welcome_text"><p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p></div>
     <div class="nav_bar_container">
-        <a href="Navigation_bar.html"><img class="logo" src="pictures/logo.png" alt="Logo"></a>
+        <a href="Navigation_bar.php"><img class="logo" src="pictures/logo.png" alt="Logo"></a>
         <div class="search_nav_link_container">
             <!-- Search bar -->
             <div class="search-container">
@@ -71,7 +71,7 @@ try {
             </div>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Navigation_bar.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="Navigation_bar.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Deals</a>
