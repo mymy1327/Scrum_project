@@ -91,7 +91,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <input class="user-input" type="text" name="username" placeholder="Username">
         <span stlye="opacity: <?php echo $opacity; ?>"><?php echo $username_err; ?></span>
 
-        <input class="password-input" type="text" name="password" placeholder="Password">
+        <input class="password-input" type="password" name="password" placeholder="Password">
         <span stlye="opacity: <?php echo $opacity; ?>"><?php echo $password_err; ?></span>
         
         <button class="submit-button" type="submit" value="sign up" >Sign up</button>

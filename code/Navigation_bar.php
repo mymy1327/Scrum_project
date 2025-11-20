@@ -29,7 +29,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <!-- Navigation Bar -->
     <div class="welcome_text"><p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p></div>
     <div class="nav_bar_container">
-      <a href="Navigation_bar.html">
+      <a href="Navigation_bar.php">
     <img class="logo" src="pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
@@ -49,7 +49,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </div>
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Navigation_bar.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="Navigation_bar.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Deals</a>
