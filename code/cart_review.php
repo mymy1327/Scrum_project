@@ -3,7 +3,7 @@ session_start();
  
 // check if the user is logged in, if not then redirect to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: Navigation_bar.html");
+    header("location: Navigation_bar.php");
     exit;
 }
 
