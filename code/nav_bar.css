@@ -452,3 +452,9 @@ body {
 .quantity {
     width: fit-content
 }
+.login-link {
+    text-decoration: none;
+    color:#00B2FF;
+    padding-left: 3px;
+    padding-right: 3px;
+}
