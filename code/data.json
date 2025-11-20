@@ -40,41 +40,47 @@
         "name":"Red Drums",
         "price":"2400 €",
         "category": "drums"
-        "price":"2400 €"
     },
     {
         "picture":"pictures/violin.png",
         "name":"Violin",
-        "price":"800 €"
+        "price":"800 €",
+        "category": "string-instruments"
     },
     {
         "picture":"pictures/trumpet.png",
         "name":"Trumpet",
-        "price":"200 €"
+        "price":"200 €",
+        "category": "drums"
     },
     {
         "picture":"pictures/triangle.png",
         "name":"Triangle",
-        "price":"50 €"
+        "price":"50 €",
+        "category": "drums"
     },
     {
         "picture":"pictures/maraca.png",
         "name":"Maraca",
-        "price":"300 €"
+        "price":"300 €",
+        "category": "drums"
     },
     {
         "picture":"pictures/harp.png",
         "name":"Harp",
-        "price":"800 €"
+        "price":"800 €",
+        "category": "string-instruments"
     },
     {
         "picture":"pictures/accordion.png",
         "name":"Accordion",
-        "price":"400 €"
+        "price":"400 €",
+        "category": "drums"
     },
     {
         "picture":"pictures/clarinet.png",
         "name":"Clarinet",
-        "price":"350 €"
+        "price":"350 €",
+        "category": "drums"
     }
 ]
