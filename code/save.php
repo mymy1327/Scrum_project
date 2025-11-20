@@ -19,7 +19,7 @@ try {
     $required = ["country", "first", "last", "address", "postal", "city", "phone", "products"];
     foreach ($required as $field) {
         if (!isset($_POST[$field]) || $_POST[$field] === "") {
-            throw new Exception("Kenttä puuttuu: $field");
+            throw new Exception("No field: $field");
         }
     }
 
@@ -44,11 +44,11 @@ try {
     ]);
 
     echo "<h2 style='font-family:Arial; color:green; text-align:center; margin-top:50px;'>
-            Kiitos! Tilauksesi on vastaanotettu.
+            Thank you! Your order has been received.
           </h2>";
 
 } catch (Exception $e) {
-    echo "<h2 style='color:red;'>Virhe:</h2>";
+    echo "<h2 style='color:red;'>Error:</h2>";
     echo $e->getMessage();
 }
 ?>
