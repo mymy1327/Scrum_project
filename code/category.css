@@ -1,7 +1,14 @@
 .card-for-each-product {
     width: 20rem;
     padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .card-img-top {
     border-radius: 5%;
+}
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
