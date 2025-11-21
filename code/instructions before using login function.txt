@@ -17,3 +17,20 @@ Create table carts (
 
         FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+
+Create DATABASE important:
+    CREATE DATABASE important
+
+Create table orders:
+    CREATE TABLE orders (
+        id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        country VARCHAR(100) NOT NULL,
+        first_name VARCHAR(100) NOT NULL,
+        last_name VARCHAR(255) NOT NULL,
+        address VARCHAR(255) NOT NULL,
+        postal VARCHAR(30) NOT NULL,
+        city VARCHAR(100) NOT NULL,
+        phone VARCHAR(30) NOT NULL,
+        products VARCHAR(250) NULL
+    );
