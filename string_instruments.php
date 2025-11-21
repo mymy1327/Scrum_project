@@ -23,7 +23,13 @@ session_start();
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
     <!-- Navigation Bar -->
-    <div class="welcome_text"><p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p></div>
+    <div class="welcome_text">
+      <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
+        <p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p>
+      <?php else: ?>
+        <p class="welcome">Welcome to Nature Music!</p>
+      <?php endif; ?>
+    </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
     <img class="logo" src="pictures/logo.png" alt="Logo">
@@ -71,7 +77,11 @@ session_start();
     <!-- Cart and log in -->
       <div class="cart_login">
         <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
-        <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+        <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
+          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+        <?php else: ?>
+        <a href="login.php"><i class='bx bxs-user'></i></a>
+        <?php endif; ?>
       </div>
     </div>
     <!-- Content -->
@@ -143,4 +153,4 @@ session_start();
       });
     </script>
   </body>
-</html>
+</html>                 

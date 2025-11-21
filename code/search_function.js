@@ -22,10 +22,16 @@
 
 // avoid user enter the cart page when not logged in
         const cartIcon = document.getElementById('cart_icon');
-        cartIcon.addEventListener('click', async () => {
+        cartIcon.addEventListener('click', async (event) => {
+            event.preventDefault(); // prevent default link behavior
             const loggedIn = await isUserLoggedIn();
-            if (!loggedIn) {
-                const notification = document.getElementById('notification');
+            const notification = document.getElementById('notification');
+            
+            if (loggedIn) {
+                window.location.href = 'cart_review.php';
+            } else {
+                // if not logged in
+                
                 notification.classList.add('show');
 
                 notification.innerHTML = 'Please <a href="login.php" class="login-link">log in</a> to view your cart.';

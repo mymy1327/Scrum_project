@@ -32,74 +32,84 @@ try {
 }
 ?> 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart review</title>
-    <link rel="stylesheet" href="cart_review.css">
-    <link rel="stylesheet" href="nav_bar.css">
-    <link rel="icon" href="pictures/logo.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Bootstrap links -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nature Music</title>
+    <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="nav_bar.css">
+    <link rel="stylesheet" href="cart_review.css">
     <!-- Logo shows next to the page title -->
-</head>
-<body>
+    <link rel="icon" href="pictures/logo.png">
+  </head>
+  <body>
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
     <!-- Navigation Bar -->
-    <div class="welcome_text"><p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p></div>
+    <div class="welcome_text">
+      <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
+        <p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p>
+      <?php else: ?>
+        <p class="welcome">Welcome to Nature Music!</p>
+      <?php endif; ?>
+    </div>
     <div class="nav_bar_container">
-        <a href="Navigation_bar.php"><img class="logo" src="pictures/logo.png" alt="Logo"></a>
-        <div class="search_nav_link_container">
-            <!-- Search bar -->
-            <div class="search-container">
-                <div class="search_bar_form justify-content-center">
-                    <input class="search_bar" id="search-input" oninput="handleSearch()" type="text" placeholder="Search">
-                    <button class="search_button justify-content-center" id="search-button" onclick="performSearch()"><i class='bx bx-search'></i></button>
-                </div>
-                <div>
-                    <ul class="search-results" id="search-results">
-                    </ul>
-                    <div id="notification" class="notification">
-                        Product has been added to cart!
-                    </div>
-                </div>
-            </div>
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Navigation_bar.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Deals</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">String Instruments</a></li>
-                        <li><a class="dropdown-item" href="#">Drums And Percussion</a></li>
-                        <li><a class="dropdown-item" href="#">Keyboards And Pianos</a></li>
-                        <li><a class="dropdown-item" href="#">Live Sound & Pro Audio</a></li>
-                        <li><a class="dropdown-item" href="#">Home Audio</a></li>
-                        <li><a class="dropdown-item" href="#">Studio And Recording</a></li>
-                    </ul>
-                </li>
+      <a href="Navigation_bar.php">
+    <img class="logo" src="pictures/logo.png" alt="Logo">
+</a>
+      <div class="search_nav_link_container">
+    <!-- Search bar -->
+      <div class="search-container">
+        <div class="search_bar_form justify-content-center">
+        <input class="search_bar" id="search-input" oninput="handleSearch()" type="text" placeholder="Search">
+        <button class="search_button justify-content-center" id="search-button" onclick="performSearch()"><i class='bx bx-search'></i></button>
+        </div>
+        <div>
+          <ul class="search-results" id="search-results">
             </ul>
+          <div id="notification" class="notification">
+            Product has been added to cart!
+          </div>
         </div>
-        <!-- Cart and log in -->
-        <div class="cart_login">
-            <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
-            <a href="logout.php"><i class='bx bx-log-out bx-flip-horizontal'></i></a>
-        </div>
+      </div>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Navigation_bar.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Deals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
+              <li><a class="dropdown-item" href="#">Drums And Percussion</a></li>
+              <li><a class="dropdown-item" href="#">Keyboards And Pianos</a></li>
+              <li><a class="dropdown-item" href="#">Live Sound & Pro Audio</a></li>
+              <li><a class="dropdown-item" href="#">Home Audio</a></li>
+              <li><a class="dropdown-item" href="#">Studio And Recording</a></li>
+            </ul>
+        </li>
+      </ul></div>
+    <!-- Cart and log in -->
+      <div class="cart_login">
+        <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
+        <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
+          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+        <?php else: ?>
+        <a href="login.php"><i class='bx bxs-user'></i></a>
+        <?php endif; ?>
+      </div>
     </div>
     <!-- Nav ends -->
 
@@ -221,7 +231,5 @@ try {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="search_function.js"></script>
-    <script>const cart = <?php echo json_encode($cartItems, JSON_UNESCAPED_UNICODE); ?>;</script>
-    <script src="cart_review.js"></script>
 </body>
 </html>
