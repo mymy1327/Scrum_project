@@ -221,5 +221,7 @@ try {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="search_function.js"></script>
+    <script>const cart = <?php echo json_encode($cartItems, JSON_UNESCAPED_UNICODE); ?>;</script>
+    <script src="cart_review.js"></script>
 </body>
 </html>
