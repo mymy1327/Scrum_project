@@ -81,7 +81,8 @@ session_start();
       <div class="card-body">
         <h5 class="card-title">Guitar</h5>
         <p class="card-text">Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä</p>
-        <a href="#" class="btn ">Add to cart</a>
+        <p>price</p> 
+        <button class="btn btn-primary">Add to cart</button>
       </div>
     </div>
     </div>
