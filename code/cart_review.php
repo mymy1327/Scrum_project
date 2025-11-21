@@ -78,7 +78,7 @@ try {
       </div>
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Navigation_bar.php">Home</a>
+          <a class="nav-link" aria-current="page" href="Navigation_bar.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Deals</a>
