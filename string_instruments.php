@@ -15,6 +15,7 @@ session_start();
     <link rel="stylesheet" href="nav_bar.css">
     <link rel="stylesheet" href="content.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="category.css">
     <!-- Logo shows next to the page title -->
     <link rel="icon" href="pictures/logo.png">
   </head>
@@ -74,8 +75,8 @@ session_start();
       </div>
     </div>
     <!-- Content -->
-     <div class="item-container row justify-content-center">
-    <div class="card card-for-each-product col-3">
+     <div class="item-container row justify-content-center" id="itemContainer">
+    <div class="card card-for-each-product">
       <img src="pictures/guitar.png" class="card-img-top" alt="guitar">
       <div class="card-body">
         <h5 class="card-title">Guitar</h5>
