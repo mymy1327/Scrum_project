@@ -3,6 +3,9 @@
 $host = "localhost";
 $dbname = "important";
 
+$user = "root";
+$pass = "";
+
 try {
     // Connect to database
     $pdo = new PDO(
