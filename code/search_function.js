@@ -119,7 +119,7 @@
                             //Failed to add to cart
                             notification.classList.add('show');
                             notification.textContent = response.message || 'Error: could not add to cart.';
-                            notification.style.backgroundColor = 'red';
+                            notification.style.backgroundColor = '#FF4040';
                             }
                             setTimeout(() => {
                             notification.classList.remove('show');
@@ -251,3 +251,95 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+async function renderCategoryCards(itemContainer, filterCategory = null ) {
+    const categoryContainer = document.getElementById('itemContainer');
+
+    if(!categoryContainer) {
+        console.error("cannot find item container to render category cards");
+        return;
+    }
+
+    if (sampleData.length === 0) {
+        try {
+            const response = await fetch('data.json');
+            if (!response.ok) {
+                throw new Error('network response was not ok');
+            }
+            sampleData = await response.json();
+        } catch (error) {
+            categoryContainer.innerHTML = '<p>Error loading data.</p>';
+            console.error('error fetching data.json', error);
+            return;
+        }
+    }
+
+    // filter items by category if specified
+    let itemsToRender = sampleData;
+    if (filterCategory) {
+        itemsToRender = sampleData.filter(item => item.category === filterCategory);
+    }
+
+    if (itemsToRender.length === 0) {
+        itemContainer.innerHTML = '<p>No items found in this category.</p>';
+        return;
+    }
+
+    categoryContainer.innerHTML = '';
+    itemsToRender.forEach(item => {
+        categoryContainer.innerHTML += `
+            <div class="card card-for-each-product">
+                <img src="${item.picture}" class="card-img-top" alt="${item.name}">
+                <div class="card-body">
+                <h5 class="card-title">${item.name}</h5>
+                <p class="card-text">Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä</p>
+                <p>${item.price}</p> 
+                <button class="btn btn-primary add-to-cart-btn"
+                data-name="${item.name}"
+                data-price="${item.price}" 
+                data-image="${item.picture}" >Add to cart</button>
+            </div>
+            </div>`;
+    })
+    attachAddToCartListeners();;
+}
+
+function attachAddToCartListeners() {
+ const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', async (event) => {
+            event.preventDefault();
+                    const notification = document.getElementById('notification');
+                    const productData = {
+                name: button.dataset.name,
+                price: button.dataset.price,
+                picture: button.dataset.image 
+            };
+
+            const response = await addToCart(productData);
+
+            if (response.success) {
+                // show success notification
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+
+            } else {
+                // show error notification
+                if (response.message.includes('Require login')) {
+                    notification.innerHTML = ' Please <a href="login.php" class="login-link">log in</a> to add items to your cart.';
+                } else {
+                    notification.textContent = `Error: ${response.message}`;
+                }
+                notification.style.backgroundColor = '#FF4040';
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    notification.style.backgroundColor = '';
+                }, 5000);
+            }
+        });
+    });
+};
