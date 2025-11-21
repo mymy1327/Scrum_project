@@ -76,15 +76,7 @@ session_start();
     </div>
     <!-- Content -->
      <div class="item-container row justify-content-center" id="itemContainer">
-    <div class="card card-for-each-product">
-      <img src="pictures/guitar.png" class="card-img-top" alt="guitar">
-      <div class="card-body">
-        <h5 class="card-title">Guitar</h5>
-        <p class="card-text">Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä</p>
-        <p>price</p> 
-        <button class="btn btn-primary">Add to cart</button>
-      </div>
-    </div>
+    
     </div>
 
     <!-- Footer -->
@@ -145,5 +137,10 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="search_function.js"></script>
+    <script>
+      document-addEventListener('DOMContentLoaded', () => {
+        renderCategoryCards('itemContainer', 'string-instruments');
+      });
+    </script>
   </body>
 </html>
