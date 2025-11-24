@@ -138,35 +138,35 @@ session_start();
         <div class="category">
             <div class="icons">
                 <a href="drums_and_percussion.php"><span class="circle">&#9679;</span>
-                <img src="pictures/drums.png" alt="drums">
+                <img src="pictures/drums.png" alt="drums"></a>
             </div>
             <p>Drums And Percussion</p>
         </div>
         <div class="category">
             <div class="icons">
                 <a href="keyboards_and_pianos.php"><span class="circle">&#9679;</span>
-                <img src="pictures/piano.png" alt="piano">
+                <img src="pictures/piano.png" alt="piano"></a>
             </div>
             <p>Keyboards And Pianos</p>
         </div>
         <div class="category">
             <div class="icons">
                 <a href="live_sound.php"><span class="circle">&#9679;</span>
-                <img src="pictures/microphone.png" alt="microphone">
+                <img src="pictures/microphone.png" alt="microphone"></a>
             </div>
             <p>Live Sound & Pro Audio</p>
         </div>
         <div class="category">
             <div class="icons">
                 <a href="home_audio.php"><span class="circle">&#9679;</span>
-                <img src="pictures/speakers.png" alt="speakers">
+                <img src="pictures/speakers.png" alt="speakers"></a>
             </div>
             <p>Home Audio</p>
         </div>
         <div class="category">
             <div class="icons">
                 <a href="studio.php"><span class="circle">&#9679;</span>
-                <img src="pictures/speaker.png" alt="speaker" class="img2">
+                <img src="pictures/speaker.png" alt="speaker" class="img2"></a>
             </div>
             <p>Studio And Recording</p>
         </div>
@@ -174,7 +174,7 @@ session_start();
         <div class="category" data-category="wind-instruments">
             <div class="icons">
                 <a href="wind.php"><span class="circle">&#9679;</span>
-                <img src="pictures/wind-instruments.png" alt="saxophone">
+                <img src="pictures/wind-instruments.png" alt="saxophone"></a>
             </div>
             <p>Wind instruments</p>
         </div>
