@@ -25,7 +25,7 @@ hr {
 .koko {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: wrap;
     margin-top: -7%;
 }
