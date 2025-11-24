@@ -143,28 +143,28 @@ session_start();
         </div>
         <div class="category">
             <div class="icons">
-                <span class="circle">&#9679;</span>
+                <a href="keyboards_and_pianos.php"><span class="circle">&#9679;</span>
                 <img src="pictures/piano.png" alt="piano">
             </div>
             <p>Keyboards And Pianos</p>
         </div>
         <div class="category">
             <div class="icons">
-                <span class="circle">&#9679;</span>
+                <a href="live_sound.php"><span class="circle">&#9679;</span>
                 <img src="pictures/microphone.png" alt="microphone">
             </div>
             <p>Live Sound & Pro Audio</p>
         </div>
         <div class="category">
             <div class="icons">
-                <span class="circle">&#9679;</span>
+                <a href="home_audio.php"><span class="circle">&#9679;</span>
                 <img src="pictures/speakers.png" alt="speakers">
             </div>
             <p>Home Audio</p>
         </div>
         <div class="category">
             <div class="icons">
-                <span class="circle">&#9679;</span>
+                <a href="studio.php"><span class="circle">&#9679;</span>
                 <img src="pictures/speaker.png" alt="speaker" class="img2">
             </div>
             <p>Studio And Recording</p>
@@ -172,7 +172,7 @@ session_start();
 
         <div class="category" data-category="wind-instruments">
             <div class="icons">
-                <span class="circle">&#9679;</span>
+                <a href="wind.php"><span class="circle">&#9679;</span>
                 <img src="pictures/wind-instruments.png" alt="saxophone">
             </div>
             <p>Wind instruments</p>

@@ -19,7 +19,7 @@
     },
     {
         "picture":"pictures/loudspeakers.png",
-        "name":"Speaker",
+        "name":"Loudspeakers",
         "price":"1500 €",
         "category": "studio"
     },
@@ -51,7 +51,7 @@
         "picture":"pictures/trumpet.png",
         "name":"Trumpet",
         "price":"200 €",
-        "category": "drums"
+        "category": "wind-instruments"
     },
     {
         "picture":"pictures/triangle.png",
@@ -75,12 +75,27 @@
         "picture":"pictures/accordion.png",
         "name":"Accordion",
         "price":"400 €",
-        "category": "drums"
+        "category": "wind-instruments"
     },
     {
         "picture":"pictures/clarinet.png",
         "name":"Clarinet",
         "price":"350 €",
-        "category": "drums"
+        "category": "wind-instruments"
+    },
+
+    {
+        "picture":"pictures/speaker.png",
+        "name":"Speaker",
+        "price":"500 €",
+        "category": "studio"
+    },
+
+    {
+        "picture":"pictures/speakers.png",
+        "name":"Speakers",
+        "price":"2650 €",
+        "category": "home-studio"
     }
+
 ]
