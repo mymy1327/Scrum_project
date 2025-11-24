@@ -6,7 +6,7 @@ Create table users.
         username VARCHAR(50) NOT NULL UNIQUE,
         password VARCHAR(255) NOT NULL
     );
-Create table carts (
+    Create table carts (
         id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
         user_id INT(11) UNSIGNED NOT NULL,
         product_image varchar(255),
@@ -16,7 +16,7 @@ Create table carts (
         created_at timestamp DEFAULT current_timestamp,
 
         FOREIGN KEY (user_id) REFERENCES users(id)
-);
+    );
 
 
 Create DATABASE important:
