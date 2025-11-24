@@ -118,7 +118,7 @@ try {
         <div class="container">
             <div class="delivery-form">
                 <!-- Form stars -->
-                <form action="save.php" method="post">
+                <form action="save.php" method="post" onsubmit="updateProductsInput()">
                     <h2>Delivery</h2>
                     <div class="row">
                         <!-- Country dropdown -->
@@ -219,8 +219,11 @@ try {
                         <h2 id="total"><?php echo number_format($total,2); ?>€</h2>
                     </div>
                 <?php endif; ?>
-        <input type="hidden" name="products" id="products" value="[]">
-        <button class='checkout' type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
+              <input type="hidden" name="products" id="products" value="[]">
+              <script>
+                const cart = <?php echo json_encode($cartItems); ?>;
+              </script>
+              <button class='checkout' type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
             </div>
         </div>
     </form>
@@ -231,5 +234,6 @@ try {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="search_function.js"></script>
+    <script src="cart_review.js"></script>
 </body>
 </html>

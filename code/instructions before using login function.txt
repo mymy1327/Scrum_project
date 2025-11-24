@@ -32,5 +32,5 @@ Create table orders:
         postal VARCHAR(30) NOT NULL,
         city VARCHAR(100) NOT NULL,
         phone VARCHAR(30) NOT NULL,
-        products VARCHAR(250) NULL
+        products JSON NULL
     );
