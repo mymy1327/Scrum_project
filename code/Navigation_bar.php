@@ -70,10 +70,11 @@ session_start();
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
               <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
-              <li><a class="dropdown-item" href="#">Keyboards And Pianos</a></li>
-              <li><a class="dropdown-item" href="#">Live Sound & Pro Audio</a></li>
-              <li><a class="dropdown-item" href="#">Home Audio</a></li>
-              <li><a class="dropdown-item" href="#">Studio And Recording</a></li>
+              <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
+              <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
+              <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
+              <li><a class="dropdown-item" href="studio.php">Studio And Recording</a></li>
+              <li><a class="dropdown-item" href="wind.php">Wind Instruments</a></li>
             </ul>
         </li>
       </ul></div>
@@ -137,43 +138,43 @@ session_start();
         <div class="category">
             <div class="icons">
                 <a href="drums_and_percussion.php"><span class="circle">&#9679;</span>
-                <img src="pictures/drums.png" alt="drums">
+                <img src="pictures/drums.png" alt="drums"></a>
             </div>
             <p>Drums And Percussion</p>
         </div>
         <div class="category">
             <div class="icons">
-                <span class="circle">&#9679;</span>
-                <img src="pictures/piano.png" alt="piano">
+                <a href="keyboards_and_pianos.php"><span class="circle">&#9679;</span>
+                <img src="pictures/piano.png" alt="piano"></a>
             </div>
             <p>Keyboards And Pianos</p>
         </div>
         <div class="category">
             <div class="icons">
-                <span class="circle">&#9679;</span>
-                <img src="pictures/microphone.png" alt="microphone">
+                <a href="live_sound.php"><span class="circle">&#9679;</span>
+                <img src="pictures/microphone.png" alt="microphone"></a>
             </div>
             <p>Live Sound & Pro Audio</p>
         </div>
         <div class="category">
             <div class="icons">
-                <span class="circle">&#9679;</span>
-                <img src="pictures/speakers.png" alt="speakers">
+                <a href="home_audio.php"><span class="circle">&#9679;</span>
+                <img src="pictures/speakers.png" alt="speakers"></a>
             </div>
             <p>Home Audio</p>
         </div>
         <div class="category">
             <div class="icons">
-                <span class="circle">&#9679;</span>
-                <img src="pictures/speaker.png" alt="speaker" class="img2">
+                <a href="studio.php"><span class="circle">&#9679;</span>
+                <img src="pictures/speaker.png" alt="speaker" class="img2"></a>
             </div>
             <p>Studio And Recording</p>
         </div>
 
         <div class="category" data-category="wind-instruments">
             <div class="icons">
-                <span class="circle">&#9679;</span>
-                <img src="pictures/wind-instruments.png" alt="saxophone">
+                <a href="wind.php"><span class="circle">&#9679;</span>
+                <img src="pictures/wind-instruments.png" alt="saxophone"></a>
             </div>
             <p>Wind instruments</p>
         </div>

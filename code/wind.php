@@ -150,7 +150,7 @@ session_start();
     <script src="search_function.js"></script>
     <script>
       document-addEventListener('DOMContentLoaded', () => {
-        renderCategoryCards('itemContainer', 'string-instruments');
+        renderCategoryCards('itemContainer', 'wind-instruments');
       });
     </script>
   </body>
