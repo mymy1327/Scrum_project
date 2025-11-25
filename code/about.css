@@ -37,7 +37,6 @@ body {
 .image-text {
     display: grid;
     grid-template-columns: 55% 1fr;
-    column-gap: -100px;
     align-items: center;
     margin: 0 auto 5%;
     max-width: 900px;
@@ -71,5 +70,28 @@ body {
     .abouth2, .aboutp, .aboutp2, .ptitle , .aboutp3 {
         width: 90%;
         margin: 0 auto;
+    }
+
+    .abouth2 {
+        font-size: 23px;
+        margin-top: 5%;
+        margin-bottom: 4%;
+    }
+
+    .aboutp, .aboutp2, .ptitle, .aboutp3 {
+        font-size: 16px;
+    }
+
+    .aboutp {
+        margin-bottom: 8%;
+    }
+
+    .ptitle {
+        margin-left: 10%;
+    }
+
+    .aboutp3 {
+        margin-top: -3%;
+        margin-bottom: 8%;
     }
 }

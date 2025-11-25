@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nature Music</title>
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="nav_bar.css">
     <link rel="stylesheet" href="footer.css">
@@ -51,7 +51,7 @@
           <a class="nav-link" href="#">Deals</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="about.php">About Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
@@ -125,7 +125,7 @@
 
         <div class="Pages_content">
             <h3 style="font-size: 20px;">Pages</h3>
-            <p><a href="#">About Us</a></p>
+            <p><a href="about.php">About Us</a></p>
             <p><a href="#">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
@@ -158,3 +158,4 @@
     </div>
     </footer>
 </body>
+</html>
