@@ -51,7 +51,7 @@
           <a class="nav-link" href="#">Deals</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="about.php">About Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
@@ -125,7 +125,7 @@
 
         <div class="Pages_content">
             <h3 style="font-size: 20px;">Pages</h3>
-            <p><a href="#">About Us</a></p>
+            <p><a href="about.php">About Us</a></p>
             <p><a href="#">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
