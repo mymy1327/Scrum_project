@@ -69,7 +69,7 @@ session_start();
               <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
               <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
               <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
-              <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
+              <li><a class="dropdown-item active" href="home_audio.php">Home Audio</a></li>
               <li><a class="dropdown-item" href="studio.php">Studio And Recording</a></li>
               <li><a class="dropdown-item" href="wind.php">Wind Instruments</a></li>
             </ul>

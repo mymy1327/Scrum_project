@@ -71,7 +71,7 @@ session_start();
               <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
               <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
               <li><a class="dropdown-item" href="studio.php">Studio And Recording</a></li>
-              <li><a class="dropdown-item" href="wind.php">Wind Instruments</a></li>
+              <li><a class="dropdown-item active" href="wind.php">Wind Instruments</a></li>
             </ul>
         </li>
       </ul></div>

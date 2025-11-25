@@ -66,7 +66,7 @@ session_start();
           <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
-              <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
+              <li><a class="dropdown-item active" href="drums_and_percussion.php">Drums And Percussion</a></li>
               <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
               <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
               <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
