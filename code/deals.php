@@ -1,15 +1,22 @@
-<!DOCTYPE html>
+<?php
+session_start();
+ 
+?>
+
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nature Music</title>
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="nav_bar.css">
+    <link rel="stylesheet" href="content.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="deals.css">
     <!-- Logo shows next to the page title -->
     <link rel="icon" href="pictures/logo.png">
   </head>
@@ -51,15 +58,15 @@
           <a class="nav-link" href="#">Deals</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.php">About Us</a>
+          <a class="nav-link" href="#">About Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
+          <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
+              <li><a class="dropdown-item active" href="string_instruments.php">String Instruments</a></li>
               <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
               <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
               <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
@@ -79,31 +86,16 @@
         <?php endif; ?>
       </div>
     </div>
-    <!-- Nav ends -->
-
-    <!-- About us page content starts -->
-    <div class="content-wrapper">
-        <h2 class="abouth2">We provide quality products — for music enthusiasts and professionals</h2>
-        <p class="aboutp">Nature Music’s shipping times are incredible—they arrive at your door quickly and securely.</p>
+    <!-- Content -->
+     <div class="offer-container container row justify-content-center">
+     <div class="offer-card card">
+        <img src="pictures/special offer.jpg" alt="Special Offer">
+        <div class="offer-details">
+            <h3>Summer Sale - Up to 30% Off!</h3>
+            <p>Get ready for summer with our exclusive discounts on selected instruments. Limited time offer!</p>
+        </div>
+            </div>
     </div>
-    <div class="image-text">
-      <div class="text-content">
-        <p class="ptitle"><strong>We have a wide range of products</strong></p>
-        <p class="aboutp2">Our instruments are crafted with precision, offering high-quality sound for both beginners and 
-        professionals. Every order is handled with care, ensuring it reaches you safely and promptly. 
-        We believe music should be accessible to everyone, so we provide the best customer service and 
-        support to make your experience flawless.</p>
-        <br>
-        <p class="aboutp3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-        printer took a galley of type and scrambled it to make a type specimen book. It has survived
-        not only five centuries, but also the leap into electronic typesetting, remaining essentially
-        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-        Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-        versions of Lorem Ipsum.</p>
-    </div>
-    <img src="pictures/handondrums.jpg" alt="hands on drums">
-  </div>
 
     <!-- Footer -->
     <footer>
@@ -126,8 +118,8 @@
 
         <div class="Pages_content">
             <h3 style="font-size: 20px;">Pages</h3>
-            <p><a href="about.php">About Us</a></p>
-            <p><a href="contact.php">Contact Info</a></p>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
         </div>
@@ -163,5 +155,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="search_function.js"></script>
-</body>
-</html>
+  </body>
+</html>                 
