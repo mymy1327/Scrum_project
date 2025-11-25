@@ -187,7 +187,7 @@ session_start();
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card">
+          <div class="card add-to-cart-btn" data-name="Red Drums" data-price="2400 €" data-image="pictures/redDrums.png">
             <img src="pictures/redDrums.png" class="card-img-top" alt="red drums">
             <div class="card-body">
               <h5 class="card-title">Red Pearl Drums</h5>
@@ -197,7 +197,7 @@ session_start();
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card">
+          <div class="card add-to-cart-btn" data-name="Electric Guitar" data-price="700 €" data-image="pictures/electricguitar.png">
             <img src="pictures/electricguitar.png" class="card-img-top" alt="electric guitar">
             <div class="card-body">
               <h5 class="card-title">Electric Guitar</h5>
@@ -207,7 +207,7 @@ session_start();
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card">
+          <div class="card add-to-cart-btn" data-name="Speaker" data-price="1500 €" data-image="pictures/loudspeakers.png">
             <img src="pictures/loudspeakers.png" class="card-img-top" alt="loud speakers">
             <div class="card-body">
               <h5 class="card-title">Loud Speakers</h5>

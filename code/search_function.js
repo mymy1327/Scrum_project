@@ -19,7 +19,9 @@
             return false; // suppose not logged in on error
         });
 }
-
+document.addEventListener('DOMContentLoaded', () => {
+    attachAddToCartListeners();
+});
 // avoid user enter the cart page when not logged in
         const cartIcon = document.getElementById('cart_icon');
         cartIcon.addEventListener('click', async (event) => {
