@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // check respone (500 Server Error)
         if (!response.ok) {
-            throw new Error(`Lỗi HTTP: ${response.status}`);
+            throw new Error(`Error HTTP: ${response.status}`);
         }
 
         const data = await response.json();
