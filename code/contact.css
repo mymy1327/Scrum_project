@@ -1,0 +1,29 @@
+.contact_page {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
+}
+
+.contact_details {
+    flex: 1;
+    background-image: url("pictures/instruments_BG.jpg");
+    background-size: 100vh;
+    background-position-y: center;
+    filter: brightness(50%);
+    
+    color: rgb(255, 255, 255);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.send_message {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

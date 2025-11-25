@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="nav_bar.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="contact.css">
     <!-- Logo shows next to the page title -->
     <link rel="icon" href="pictures/logo.png">
   </head>
@@ -80,29 +80,40 @@
     </div>
     <!-- Nav ends -->
 
-    <!-- About us page content starts -->
-    <div class="content-wrapper">
-        <h2 class="abouth2">We provide quality products — for music enthusiasts and professionals</h2>
-        <p class="aboutp">Nature Music’s shipping times are incredible—they arrive at your door quickly and securely.</p>
+    <!-- Contact us page content starts -->
+    <div class="contact_page">
+        <div class="contact_details">
+            <h1>Contact details</h1>
+
+            <p class="titles">Phone</p>
+            <p class="info">+ 94 76 00 00 000</p>
+
+            <p class="titles">Email</p>
+            <p class="info">contact@example.com</p>
+
+            <p class="titles">Address</p>
+            <p class="info">123 Business Street, Suite 100, City,<br>State, ZIP</p>
+        </div>
+
+
+        <!-- form for sending message -->
+        <div class="send_message">
+            <h1>Send us a message</h1>
+            <p>You are always welcome to contact us. Our <br>
+        customer service is available Mon-Fri 9:00 a.m.- <br>
+    8.00 p.m. and Sat-Sun 10.00 a.m.-6.00 p.m.</p>
+            <form>
+                <input type="text" placeholder="Enter your name*"required> <br><br>
+                <input type="text" placeholder="Enter your last name*"required> <br><br>
+                <input type="email" placeholder="Enter a valid email adress*"required> <br><br>
+                <input type="tel" placeholder="Enter your phone number*"required> <br><br>
+                <textarea placeholder="Write your message*"required></textarea> <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-    <div class="image-text">
-      <div class="text-content">
-        <p class="ptitle"><strong>We have a wide range of products</strong></p>
-        <p class="aboutp2">Our instruments are crafted with precision, offering high-quality sound for both beginners and 
-        professionals. Every order is handled with care, ensuring it reaches you safely and promptly. 
-        We believe music should be accessible to everyone, so we provide the best customer service and 
-        support to make your experience flawless.</p>
-        <br>
-        <p class="aboutp3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-        printer took a galley of type and scrambled it to make a type specimen book. It has survived
-        not only five centuries, but also the leap into electronic typesetting, remaining essentially
-        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-        Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-        versions of Lorem Ipsum.</p>
-    </div>
-    <img src="pictures/handondrums.jpg" alt="hands on drums">
-  </div>
+    
+    <!-- Contact us page content ends -->
 
     <!-- Footer -->
     <footer>

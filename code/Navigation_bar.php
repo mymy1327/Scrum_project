@@ -63,7 +63,7 @@ session_start();
           <a class="nav-link" href="about.php">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="contact.php">Contact Us</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
@@ -269,7 +269,7 @@ session_start();
         <div class="Pages_content">
             <h3 style="font-size: 20px;">Pages</h3>
             <p><a href="about.php">About Us</a></p>
-            <p><a href="#">Contact Info</a></p>
+            <p><a href="contact.php">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
         </div>
