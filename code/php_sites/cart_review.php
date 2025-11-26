@@ -41,10 +41,10 @@ try {
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="nav_bar.css">
-    <link rel="stylesheet" href="cart_review.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/cart_review.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="pictures/logo.png">
+    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
@@ -59,7 +59,7 @@ try {
     </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
-    <img class="logo" src="pictures/logo.png" alt="Logo">
+    <img class="logo" src="/scrum_project/code/pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
     <!-- Search bar -->
@@ -81,13 +81,13 @@ try {
           <a class="nav-link" aria-current="page" href="Navigation_bar.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Deals</a>
+          <a class="nav-link" href="deals.php">Deals</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.php">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="contact.php">Contact Us</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
@@ -106,7 +106,7 @@ try {
       <div class="cart_login">
         <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+          <a href="only_php/logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
         <?php else: ?>
         <a href="login.php"><i class='bx bxs-user'></i></a>
         <?php endif; ?>
@@ -119,7 +119,7 @@ try {
         <div class="container">
             <div class="delivery-form">
                 <!-- Form stars -->
-                <form action="save.php" method="post" onsubmit="updateProductsInput()">
+                <form action="/scrum_project/code/php_sites/only_php/save.php" method="post" onsubmit="updateProductsInput()">
                     <h2>Delivery</h2>
                     <div class="row">
                         <!-- Country dropdown -->
@@ -234,7 +234,7 @@ try {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="search_function.js"></script>
-    <script src="cart_review.js"></script>
+    <script src="/scrum_project/code/javascript_json/search_function.js"></script>
+    <script src="/scrum_project/code/javascript_json/cart_review.js"></script>
 </body>
 </html>

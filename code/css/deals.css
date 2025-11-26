@@ -1,0 +1,88 @@
+.offer-container, .new-arrivals-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;   
+    flex-direction: column;           
+    align-items: center;        
+}
+.offer-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+    cursor: pointer;
+    margin: 0px auto;
+}
+.deals-title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.deals-title::before, .deals-title::after {
+    content: "";
+    display: inline-block;
+    background-color: rgb(86, 97, 97);
+    width: 200px;
+    height: 2px;
+    margin: 0 5px;
+}   
+.new-arrival-card img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+.new-arrival-button {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+    .new-arrivals-card {
+        position: relative;
+        display: inline-block;
+        max-width: fit-content;
+        width: 100%;
+    }
+    .new-arrivals-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .new-arrivals-button {
+        z-index: 4;
+        position: absolute;
+        top: 72%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        padding: 30px 70px;
+        background-color: #005FA3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'Karma', serif;
+        font-size:xx-large;
+        font-weight:400;
+    }
+.new-arrivals-details h3 {
+    margin-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+.new-arrivals-details p {
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}

@@ -1,5 +1,5 @@
 body {
-    background-image: url('pictures/image.png');
+    background-image: url('/scrum_project/code/pictures/image.png');
     background-size: cover;
     background-repeat: no-repeat;
 }

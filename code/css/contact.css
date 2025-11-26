@@ -7,8 +7,8 @@
 /* contact details left */
 .contact_details {
     flex: 1;
-    background-image: url("pictures/instruments_BG.jpg");
     background-size: cover;
+    background-image: url('/scrum_project/code/pictures/instruments_BG.jpg');
     background-position-y: center;
     color: white;
     padding: 50px;
