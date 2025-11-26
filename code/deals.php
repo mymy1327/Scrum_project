@@ -11,6 +11,7 @@ session_start();
     <title>Nature Music</title>
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
+    <link href='https://fonts.google.com/specimen/Karma?query=karma' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="nav_bar.css">
     <link rel="stylesheet" href="content.css">
@@ -55,7 +56,7 @@ session_start();
           <a class="nav-link" aria-current="page" href="Navigation_bar.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Deals</a>
+          <a class="nav-link active" href="deals.php">Deals</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About Us</a>
@@ -64,9 +65,9 @@ session_start();
           <a class="nav-link" href="#">Contact Us</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item active" href="string_instruments.php">String Instruments</a></li>
+              <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
               <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
               <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
               <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
@@ -87,12 +88,24 @@ session_start();
       </div>
     </div>
     <!-- Content -->
-     <div class="offer-container container row justify-content-center">
+     <div class="offer-container justify-content-center">
+        <span class="deals-title">Deals & Offers</span>
      <div class="offer-card card">
-        <img src="pictures/special offer.jpg" alt="Special Offer">
+        <img src="pictures/special offer.png" alt="Special Offer">
         <div class="offer-details">
             <h3>Summer Sale - Up to 30% Off!</h3>
             <p>Get ready for summer with our exclusive discounts on selected instruments. Limited time offer!</p>
+        </div>
+            </div>
+    </div>
+    <div class="new-arrivals-container justify-content-center">
+        <span class="deals-title">New Arrivals</span>
+     <div class="new-arrivals-card">
+        <img src="pictures/newarrival.png" alt="New Arrival">
+        <button class="new-arrivals-button">Shop Now</button>
+        <div class="new-arrivals-details">
+            <h3>Latest Guitar Models Just In!</h3>
+            <p>Explore our collection of the newest guitar models from top brands. Find your perfect sound today!</p>
         </div>
             </div>
     </div>
