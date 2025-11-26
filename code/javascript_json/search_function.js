@@ -3,7 +3,7 @@
         const searchResults = document.getElementById('search-results');
 
         function isUserLoggedIn() {
-    return fetch('check_login.php')
+    return fetch('/scrum_project/code/php_sites/only_php/check_login.php')
         .then(response => {
             // check for network errors
             if (!response.ok) {
@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const notification = document.getElementById('notification');
             
             if (loggedIn) {
-                window.location.href = 'cart_review.php';
+                window.location.href = '/scrum_project/code/php_sites/cart_review.php';
             } else {
                 // if not logged in
                 
                 notification.classList.add('show');
 
-                notification.innerHTML = 'Please <a href="login.php" class="login-link">log in</a> to view your cart.';
+                notification.innerHTML = 'Please <a href="/scrum_project/code/php_sites/login.php" class="login-link">log in</a> to view your cart.';
         
                 setTimeout(() => {
                     notification.classList.remove('show');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
         //Take information from json
         let sampleData = [];
-        fetch('data.json')
+        fetch('/scrum_project/code/javascript_json/data.json')
         .then(response => {
             return response.json();
         })
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // if not logged in
                         notification.classList.add('show');
 
-                        notification.innerHTML = 'Please <a href="login.php" class="login-link">log in</a> to add items to your cart.';
+                        notification.innerHTML = 'Please <a href="/scrum_project/code/php_sites/login.php" class="login-link">log in</a> to add items to your cart.';
                         setTimeout(() => {
                             notification.classList.remove('show');
                         }, 5000);
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: product.picture
             };
             try {
-            const response = await fetch('add_to_cart.php', {
+            const response = await fetch('/scrum_project/code/php_sites/only_php/add_to_cart.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 async function removeFromCart(productName) {
     try {
-        const response = await fetch('remove_from_cart.php', {
+        const response = await fetch('/scrum_project/code/php_sites/only_php/remove_from_cart.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -270,7 +270,7 @@ async function renderCategoryCards(itemContainer, filterCategory = null ) {
 
     if (sampleData.length === 0) {
         try {
-            const response = await fetch('data.json');
+            const response = await fetch('/scrum_project/code/javascript_json/data.json');
             if (!response.ok) {
                 throw new Error('network response was not ok');
             }
@@ -337,7 +337,7 @@ function attachAddToCartListeners() {
             } else {
                 // show error notification
                 if (response.message.includes('Require login')) {
-                    notification.innerHTML = ' Please <a href="login.php" class="login-link">log in</a> to add items to your cart.';
+                    notification.innerHTML = ' Please <a href="/scrum_project/code/php_sites/login.php" class="login-link">log in</a> to add items to your cart.';
                 } else {
                     notification.textContent = `Error: ${response.message}`;
                 }
@@ -351,3 +351,5 @@ function attachAddToCartListeners() {
         });
     });
 };
+
+console.log("Working");

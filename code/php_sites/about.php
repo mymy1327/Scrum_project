@@ -7,11 +7,11 @@
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="nav_bar.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/footer.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/about.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="pictures/logo.png">
+    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
@@ -26,7 +26,7 @@
     </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
-    <img class="logo" src="pictures/logo.png" alt="Logo">
+    <img class="logo" src="/scrum_project/code/pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
     <!-- Search bar -->
@@ -48,23 +48,24 @@
           <a class="nav-link" aria-current="page" href="Navigation_bar.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Deals</a>
+          <a class="nav-link" href="deals.php">Deals</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.php">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="contact.php">Contact Us</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
-              <li><a class="dropdown-item" href="#">Drums And Percussion</a></li>
-              <li><a class="dropdown-item" href="#">Keyboards And Pianos</a></li>
-              <li><a class="dropdown-item" href="#">Live Sound & Pro Audio</a></li>
-              <li><a class="dropdown-item" href="#">Home Audio</a></li>
-              <li><a class="dropdown-item" href="#">Studio And Recording</a></li>
+              <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
+              <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
+              <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
+              <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
+              <li><a class="dropdown-item" href="studio.php">Studio And Recording</a></li>
+              <li><a class="dropdown-item" href="wind.php">Wind Instruments</a></li>
             </ul>
         </li>
       </ul></div>
@@ -72,48 +73,37 @@
       <div class="cart_login">
         <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+          <a href="only_php/logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
         <?php else: ?>
-        <a href="login.php"><i class='bx bxs-user'></i></a>
+        <a href="only_php/login.php"><i class='bx bxs-user'></i></a>
         <?php endif; ?>
       </div>
     </div>
     <!-- Nav ends -->
 
-    <!-- Contact us page content starts -->
-    <div class="contact_page">
-        <div class="contact_details">
-            <h1>Contact details</h1>
-
-            <p class="titles">Phone</p>
-            <p class="info">+ 94 76 00 00 000</p>
-
-            <p class="titles">Email</p>
-            <p class="info">contact@example.com</p>
-
-            <p class="titles">Address</p>
-            <p class="info">123 Business Street, Suite 100, City,<br>State, ZIP</p>
-        </div>
-
-
-        <!-- form for sending message -->
-        <div class="send_message">
-            <h1>Send us a message</h1>
-            <p>You are always welcome to contact us. Our <br>
-        customer service is available Mon-Fri 9:00 a.m.- <br>
-    8.00 p.m. and Sat-Sun 10.00 a.m.-6.00 p.m.</p>
-            <form>
-                <input type="text" placeholder="Enter your name*"required> <br><br>
-                <input type="text" placeholder="Enter your last name*"required> <br><br>
-                <input type="email" placeholder="Enter a valid email adress*"required> <br><br>
-                <input type="tel" placeholder="Enter your phone number*"required> <br><br>
-                <textarea placeholder="Write your message*"required></textarea> <br><br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+    <!-- About us page content starts -->
+    <div class="content-wrapper">
+        <h2 class="abouth2">We provide quality products — for music enthusiasts and professionals</h2>
+        <p class="aboutp">Nature Music’s shipping times are incredible—they arrive at your door quickly and securely.</p>
     </div>
-    
-    <!-- Contact us page content ends -->
+    <div class="image-text">
+      <div class="text-content">
+        <p class="ptitle"><strong>We have a wide range of products</strong></p>
+        <p class="aboutp2">Our instruments are crafted with precision, offering high-quality sound for both beginners and 
+        professionals. Every order is handled with care, ensuring it reaches you safely and promptly. 
+        We believe music should be accessible to everyone, so we provide the best customer service and 
+        support to make your experience flawless.</p>
+        <br>
+        <p class="aboutp3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+        printer took a galley of type and scrambled it to make a type specimen book. It has survived
+        not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+        Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+        versions of Lorem Ipsum.</p>
+    </div>
+    <img src="/scrum_project/code/pictures/handondrums.jpg" alt="hands on drums">
+  </div>
 
     <!-- Footer -->
     <footer>
@@ -121,7 +111,7 @@
     <div class="footer-container">
 
         <div class="text">
-            <a href="Navigation_bar.php"><img src="pictures/logo.png" alt="Nature Music"></a>
+            <a href="Navigation_bar.php"><img src="/scrum_project/code/pictures/logo.png" alt="Nature Music"></a>
             <p>Lorem ipsum dolor sit amet consectetur. <br>
             Consequat fermentum viverra auctor nibh <br> eleifend sed lorem. </p>
 
@@ -168,5 +158,11 @@
         <small><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></small>
     </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../javascript_json/search_function.js"></script>
+"></script>
 </body>
 </html>

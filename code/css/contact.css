@@ -6,7 +6,7 @@
 
 .contact_details {
     flex: 1;
-    background-image: url("pictures/instruments_BG.jpg");
+    background-image: url('/scrum_project/code/pictures/instruments_BG.jpg');
     background-size: 100vh;
     background-position-y: center;
     filter: brightness(50%);

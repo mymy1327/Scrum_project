@@ -16,11 +16,11 @@ session_start();
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="nav_bar.css">
-    <link rel="stylesheet" href="content.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/content.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/footer.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="pictures/logo.png">
+    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
@@ -35,7 +35,7 @@ session_start();
     </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
-    <img class="logo" src="pictures/logo.png" alt="Logo">
+    <img class="logo" src="/scrum_project/code/pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
     <!-- Search bar -->
@@ -57,7 +57,7 @@ session_start();
           <a class="nav-link active" aria-current="page" href="Navigation_bar.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Deals</a>
+          <a class="nav-link" href="deals.php">Deals</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.php">About Us</a>
@@ -82,7 +82,7 @@ session_start();
       <div class="cart_login">
         <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+          <a href="/scrum_project/code/php_sites/only_php/logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
         <?php else: ?>
         <a href="login.php"><i class='bx bxs-user'></i></a>
         <?php endif; ?>
@@ -90,7 +90,7 @@ session_start();
     </div>
     <!-- Banner -->
     <div class="banner_container">
-      <img class="banner_image" src="pictures/image.jpeg" alt="Banner">
+      <img class="banner_image" src="/scrum_project/code/pictures/image.jpeg" alt="Banner">
       <h3 class="banner_text_top">DISCOVER</h3>
       <h3 class="banner_text_bottom">SOUND OF DREAMS</h3>
     
@@ -131,42 +131,42 @@ session_start();
         <div class="category">
             <div class="icons">
                 <a href="string_instruments.php"><span class="circle">&#9679;</span>
-                <img src="pictures/guitar.png" alt="guitar"></a>
+                <img src="/scrum_project/code/pictures/guitar.png" alt="guitar"></a>
             </div>
             <p>String Instruments</p>
         </div>
         <div class="category">
             <div class="icons">
                 <a href="drums_and_percussion.php"><span class="circle">&#9679;</span>
-                <img src="pictures/drums.png" alt="drums"></a>
+                <img src="/scrum_project/code/pictures/drums.png" alt="drums"></a>
             </div>
             <p>Drums And Percussion</p>
         </div>
         <div class="category">
             <div class="icons">
                 <a href="keyboards_and_pianos.php"><span class="circle">&#9679;</span>
-                <img src="pictures/piano.png" alt="piano"></a>
+                <img src="/scrum_project/code/pictures/piano.png" alt="piano"></a>
             </div>
             <p>Keyboards And Pianos</p>
         </div>
         <div class="category">
             <div class="icons">
                 <a href="live_sound.php"><span class="circle">&#9679;</span>
-                <img src="pictures/microphone.png" alt="microphone"></a>
+                <img src="/scrum_project/code/pictures/microphone.png" alt="microphone"></a>
             </div>
             <p>Live Sound & Pro Audio</p>
         </div>
         <div class="category">
             <div class="icons">
                 <a href="home_audio.php"><span class="circle">&#9679;</span>
-                <img src="pictures/speakers.png" alt="speakers"></a>
+                <img src="/scrum_project/code/pictures/speakers.png" alt="speakers"></a>
             </div>
             <p>Home Audio</p>
         </div>
         <div class="category">
             <div class="icons">
                 <a href="studio.php"><span class="circle">&#9679;</span>
-                <img src="pictures/speaker.png" alt="speaker" class="img2"></a>
+                <img src="/scrum_project/code/pictures/speaker.png" alt="speaker" class="img2"></a>
             </div>
             <p>Studio And Recording</p>
         </div>
@@ -174,7 +174,7 @@ session_start();
         <div class="category" data-category="wind-instruments">
             <div class="icons">
                 <a href="wind.php"><span class="circle">&#9679;</span>
-                <img src="pictures/wind-instruments.png" alt="saxophone"></a>
+                <img src="/scrum_project/code/pictures/wind-instruments.png" alt="saxophone"></a>
             </div>
             <p>Wind instruments</p>
         </div>
@@ -187,8 +187,8 @@ session_start();
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card add-to-cart-btn" data-name="Red Drums" data-price="2400 €" data-image="pictures/redDrums.png">
-            <img src="pictures/redDrums.png" class="card-img-top" alt="red drums">
+          <div class="card add-to-cart-btn" data-name="Red Drums" data-price="2400 €" data-image="/scrum_project/code/pictures/redDrums.png">
+            <img src="/scrum_project/code/pictures/redDrums.png" class="card-img-top" alt="red drums">
             <div class="card-body">
               <h5 class="card-title">Red Pearl Drums</h5>
               <p class="card-text">Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä</p>
@@ -197,8 +197,8 @@ session_start();
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card add-to-cart-btn" data-name="Electric Guitar" data-price="700 €" data-image="pictures/electricguitar.png">
-            <img src="pictures/electricguitar.png" class="card-img-top" alt="electric guitar">
+          <div class="card add-to-cart-btn" data-name="Electric Guitar" data-price="700 €" data-image="/scrum_project/code/pictures/electricguitar.png">
+            <img src="/scrum_project/code/pictures/electricguitar.png" class="card-img-top" alt="electric guitar">
             <div class="card-body">
               <h5 class="card-title">Electric Guitar</h5>
               <p class="card-text">Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä</p>
@@ -207,8 +207,8 @@ session_start();
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card add-to-cart-btn" data-name="Speaker" data-price="1500 €" data-image="pictures/loudspeakers.png">
-            <img src="pictures/loudspeakers.png" class="card-img-top" alt="loud speakers">
+          <div class="card add-to-cart-btn" data-name="Speaker" data-price="1500 €" data-image="/scrum_project/code/pictures/loudspeakers.png">
+            <img src="/scrum_project/code/pictures/loudspeakers.png" class="card-img-top" alt="loud speakers">
             <div class="card-body">
               <h5 class="card-title">Loud Speakers</h5>
               <p class="card-text">Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä</p>
@@ -223,7 +223,7 @@ session_start();
     <p class="kolmas title">ABOUT US</p>
     <hr>
     <div class="container2">
-        <img src="pictures/roomWithInstruments.jpg" alt="room with instruments" id="room">
+        <img src="/scrum_project/code/pictures/roomWithInstruments.jpg" alt="room with instruments" id="room">
         <div class="text-section">
             <h2>Nature Music Center</h2>
             <p class="image-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -253,7 +253,7 @@ session_start();
     <div class="footer-container">
 
         <div class="text">
-            <a href="Navigation_bar.php"><img src="pictures/logo.png" alt="Nature Music"></a>
+            <a href="Navigation_bar.php"><img src="/scrum_project/code/pictures/logo.png" alt="Nature Music"></a>
             <p>Lorem ipsum dolor sit amet consectetur. <br>
             Consequat fermentum viverra auctor nibh <br> eleifend sed lorem. </p>
 
@@ -304,6 +304,7 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="search_function.js"></script>
+    <script src="/scrum_project/code/javascript_json/search_function.js"></script>
+"></script>
   </body>
 </html>

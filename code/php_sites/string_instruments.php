@@ -12,12 +12,12 @@ session_start();
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="nav_bar.css">
-    <link rel="stylesheet" href="content.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/content.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/footer.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/category.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="pictures/logo.png">
+    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
@@ -32,7 +32,7 @@ session_start();
     </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
-    <img class="logo" src="pictures/logo.png" alt="Logo">
+    <img class="logo" src="/scrum_project/code/pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
     <!-- Search bar -->
@@ -54,21 +54,21 @@ session_start();
           <a class="nav-link" aria-current="page" href="Navigation_bar.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Deals</a>
+          <a class="nav-link" href="deals.php">Deals</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.php">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="contact.php">Contact Us</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
+              <li><a class="dropdown-item active" href="string_instruments.php">String Instruments</a></li>
               <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
               <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
-              <li><a class="dropdown-item active" href="live_sound.php">Live Sound & Pro Audio</a></li>
+              <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
               <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
               <li><a class="dropdown-item" href="studio.php">Studio And Recording</a></li>
               <li><a class="dropdown-item" href="wind.php">Wind Instruments</a></li>
@@ -79,7 +79,7 @@ session_start();
       <div class="cart_login">
         <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+          <a href="only_php/logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
         <?php else: ?>
         <a href="login.php"><i class='bx bxs-user'></i></a>
         <?php endif; ?>
@@ -96,7 +96,7 @@ session_start();
     <div class="footer-container">
 
         <div class="text">
-            <a href="Navigation_bar.php"><img src="pictures/logo.png" alt="Nature Music"></a>
+            <a href="Navigation_bar.php"><img src="/scrum_project/code/pictures/logo.png" alt="Nature Music"></a>
             <p>Lorem ipsum dolor sit amet consectetur. <br>
             Consequat fermentum viverra auctor nibh <br> eleifend sed lorem. </p>
 
@@ -112,7 +112,7 @@ session_start();
         <div class="Pages_content">
             <h3 style="font-size: 20px;">Pages</h3>
             <p><a href="about.php">About Us</a></p>
-            <p><a href="#">Contact Info</a></p>
+            <p><a href="contact.php">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
         </div>
@@ -147,10 +147,10 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="search_function.js"></script>
+    <script src="/scrum_project/code/javascript_json/search_function.js"></script>
     <script>
       document-addEventListener('DOMContentLoaded', () => {
-        renderCategoryCards('itemContainer', 'sound-audio');
+        renderCategoryCards('itemContainer', 'string-instruments');
       });
     </script>
   </body>

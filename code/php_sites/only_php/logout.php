@@ -8,6 +8,6 @@ $_SESSION = array();
 session_destroy();
  
 // Redirect to home page
-header("location: Navigation_bar.php");
+header("location: /scrum_project/code/php_sites/Navigation_bar.php");
 exit;
 ?>
