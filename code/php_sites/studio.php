@@ -17,7 +17,7 @@ session_start();
     <link rel="stylesheet" href="/scrum_project/code/css/footer.css">
     <link rel="stylesheet" href="/scrum_project/code/css/category.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
+    <link rel="icon" href="pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
@@ -32,7 +32,7 @@ session_start();
     </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
-    <img class="logo" src="/scrum_project/code/pictures/logo.png" alt="Logo">
+    <img class="logo" src="pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
     <!-- Search bar -->
@@ -96,7 +96,7 @@ session_start();
     <div class="footer-container">
 
         <div class="text">
-            <a href="Navigation_bar.php"><img src="/scrum_project/code/pictures/logo.png" alt="Nature Music"></a>
+            <a href="Navigation_bar.php"><img src="pictures/logo.png" alt="Nature Music"></a>
             <p>Lorem ipsum dolor sit amet consectetur. <br>
             Consequat fermentum viverra auctor nibh <br> eleifend sed lorem. </p>
 

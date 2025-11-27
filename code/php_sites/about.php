@@ -16,7 +16,7 @@ session_start();
     <link rel="stylesheet" href="/scrum_project/code/css/footer.css">
     <link rel="stylesheet" href="/scrum_project/code/css/about.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
+    <link rel="icon" href="pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
@@ -107,7 +107,7 @@ session_start();
         Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
         versions of Lorem Ipsum.</p>
     </div>
-    <img src="/scrum_project/code/pictures/handondrums.jpg" alt="hands on drums">
+    <img src="pictures/handondrums.jpg" alt="hands on drums">
   </div>
 
     <!-- Footer -->
@@ -116,7 +116,7 @@ session_start();
     <div class="footer-container">
 
         <div class="text">
-            <a href="Navigation_bar.php"><img src="/scrum_project/code/pictures/logo.png" alt="Nature Music"></a>
+            <a href="Navigation_bar.php"><img src="pictures/logo.png" alt="Nature Music"></a>
             <p>Lorem ipsum dolor sit amet consectetur. <br>
             Consequat fermentum viverra auctor nibh <br> eleifend sed lorem. </p>
 

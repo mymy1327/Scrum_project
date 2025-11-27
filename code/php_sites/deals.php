@@ -19,7 +19,7 @@ session_start();
     <link rel="stylesheet" href="/scrum_project/code/css/category.css">
     <link rel="stylesheet" href="/scrum_project/code/css/deals.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
+    <link rel="icon" href="pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
@@ -34,7 +34,7 @@ session_start();
     </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
-    <img class="logo" src="/scrum_project/code/pictures/logo.png" alt="Logo">
+    <img class="logo" src="pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
     <!-- Search bar -->
@@ -91,7 +91,7 @@ session_start();
      <div class="offer-container justify-content-center">
         <span class="deals-title">Deals & Offers</span>
      <div class="offer-card card">
-        <img src="/scrum_project/code/pictures/special offer.png" alt="Special Offer">
+        <img src="pictures/special offer.png" alt="Special Offer">
         <div class="offer-details">
             <h3>Summer Sale - Up to 30% Off!</h3>
             <p>Get ready for summer with our exclusive discounts on selected instruments. Limited time offer!</p>
@@ -101,7 +101,7 @@ session_start();
     <div class="new-arrivals-container justify-content-center">
         <span class="deals-title">New Arrivals</span>
      <div class="new-arrivals-card">
-        <img src="/scrum_project/code/pictures/newarrival.png" alt="New Arrival">
+        <img src="pictures/newarrival.png" alt="New Arrival">
         <button class="new-arrivals-button">Shop Now</button>
         <div class="new-arrivals-details">
             <h3>Latest Guitar Models Just In!</h3>
