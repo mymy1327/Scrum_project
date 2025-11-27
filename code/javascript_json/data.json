@@ -96,6 +96,27 @@
         "name":"Speakers",
         "price":"2650 €",
         "category": "home-studio"
+    },
+
+    {
+        "picture":"pictures/newarrival_offer.png",
+        "name":"Trumpet (New arrival)",
+        "price":"100€",
+        "category":"wind-instruments"
+    },
+
+    {
+        "picture":"pictures/combo_offer.jpg",
+        "name":"Drums (special offer)",
+        "price":"840€",
+        "category":"special-offer"
+    },
+
+    {
+        "picture":"pictures/combo_offer 2.png",
+        "name":"Triangle (special offer)",
+        "price":"35€",
+        "category":"special-offer"
     }
 
 ]

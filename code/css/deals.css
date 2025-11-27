@@ -5,14 +5,11 @@
     flex-direction: column;           
     align-items: center;        
 }
-.offer-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 600px;
+.offer-card img {
     width: 100%;
-    cursor: pointer;
-    margin: 0px auto;
+    height: auto;
+    z-index: 1;
+    position: relative;
 }
 .deals-title {
     font-size: 2em;
@@ -34,20 +31,6 @@
     position: relative;
     z-index: 1;
 }
-.new-arrival-button {
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
     .new-arrivals-card {
         position: relative;
         display: inline-block;
@@ -58,6 +41,23 @@
         width: 100%;
         height: auto;
         display: block;
+    }
+    .offer-button {
+        z-index: 4;
+        position: absolute;
+        top: 102%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px 50px;
+        background-color: #3387c3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family:'Times New Roman', Times, serif;
+        font-size:xx-large;
+        font-weight:400;
     }
     .new-arrivals-button {
         z-index: 4;
@@ -72,17 +72,22 @@
         border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
-        font-family: 'Karma', serif;
+        font-family:'Times New Roman', Times, serif;
         font-size:xx-large;
         font-weight:400;
     }
-.new-arrivals-details h3 {
+.new-arrivals-details h3, .offer-details h3 {
     margin-top: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
 }
-.new-arrivals-details p {
+.new-arrivals-details p, .offer-details p {
     margin-bottom: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
+}
+@media  (max-width: 1200px) {
+        .offer-button {
+        top: 87%;
+        }
 }
