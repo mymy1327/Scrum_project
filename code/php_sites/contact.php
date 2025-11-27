@@ -130,7 +130,7 @@ session_start();
                 <input type="email" placeholder="Enter a valid email adress*"required> 
                 <input type="tel" placeholder="Enter your phone number*"required> 
                 <textarea placeholder="Write your message*"required></textarea> 
-                <button type="submit">Submit</button>
+                <button type="submit">SUBMIT</button>
             </form>
         </div>
     </div>

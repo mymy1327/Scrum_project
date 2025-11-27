@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
     gap: 15px;
 }
@@ -23,12 +24,24 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%);
 }
 
 .contact_details *{
     position: relative;
     z-index: 1;
+}
+
+.contact_details > * {
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.contact_details h1 {
+    font-size: 2.5 rem;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 /*send message right*/
@@ -53,34 +66,50 @@
 }
 
 .send_message input, .send_message textarea {
-    padding: 15px;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 15px; 
+    border: 2px solid #dbd8d8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 } 
+
+.send_message textarea {
+    min-height: 140px;
+}
 
 .send_message button {
     padding: 12px;
     background-color: rgb(0, 0, 0);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .send_message button:hover {
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(70, 70, 70);
 }
 
-.send_message h1, .send_message p {
+.send_message h1 {
+    font-size: 2.5 rem;
+    font-weight: 700;
     text-align: center;
+}
+
+.send_message p {
+    text-align: center;
+    color: #505050;
+    line-height: 1.6;
 }
 
 /* style for the contact details */
 .titles {
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.info {
+    font-size: 15px;
 }
 
 .contact_item {
