@@ -86,9 +86,7 @@ session_start();
       </div>
     </div>
     <!-- Content -->
-     <div class="item-container row justify-content-center" id="itemContainer">
-    
-    </div>
+    <div class="item-container row justify-content-center" id="itemContainer"></div>
 
     <!-- Footer -->
     <footer>
