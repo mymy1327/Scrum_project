@@ -153,6 +153,12 @@ hr {
         grid-template-columns: 1fr;
         row-gap: 20px;
     }
+
+    .best-seller-container {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 769px) {

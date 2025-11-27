@@ -14,7 +14,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nature Music</title>
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
     <link rel="stylesheet" href="/scrum_project/code/css/content.css">
@@ -184,7 +184,7 @@ session_start();
     <!-- Cards that show the best sellers -->
     <p class="toinen title">BEST SELLER</p>
     <hr>
-    <div class="container">
+    <div class="best-seller-container container">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-md-4 mb-4">
           <div class="card add-to-cart-btn" data-name="Red Drums" data-price="2400 €" data-image="/scrum_project/code/pictures/redDrums.png">
@@ -305,6 +305,5 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/scrum_project/code/javascript_json/search_function.js"></script>
-"></script>
   </body>
 </html>

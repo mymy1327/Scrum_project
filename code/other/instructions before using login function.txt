@@ -18,10 +18,6 @@ Create table users.
         FOREIGN KEY (user_id) REFERENCES users(id)
     );
 
-
-Create DATABASE important:
-    CREATE DATABASE important
-
 Create table orders:
     CREATE TABLE orders (
         id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -34,3 +30,14 @@ Create table orders:
         phone VARCHAR(30) NOT NULL,
         products JSON NULL
     );
+
+//database for the contact form
+CREATE TABLE IF NOT EXISTS contact_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
