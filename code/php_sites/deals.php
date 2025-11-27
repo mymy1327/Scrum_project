@@ -19,7 +19,7 @@ session_start();
     <link rel="stylesheet" href="/scrum_project/code/css/category.css">
     <link rel="stylesheet" href="/scrum_project/code/css/deals.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
+    <link rel="icon" href="pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
@@ -34,7 +34,7 @@ session_start();
     </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
-    <img class="logo" src="/scrum_project/code/pictures/logo.png" alt="Logo">
+    <img class="logo" src="pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
     <!-- Search bar -->
@@ -91,7 +91,7 @@ session_start();
      <div class="offer-container justify-content-center">
         <span class="deals-title">Deals & Offers</span>
      <div class="offer-card card">
-        <img src="/scrum_project/code/pictures/special offer.png" alt="Special Offer">
+        <img src="pictures/special offer.png" alt="Special Offer">
         <div class="offer-details">
             <h3>Summer Sale - Up to 30% Off!</h3>
             <p>Get ready for summer with our exclusive discounts on selected instruments. Limited time offer!</p>
@@ -101,7 +101,7 @@ session_start();
     <div class="new-arrivals-container justify-content-center">
         <span class="deals-title">New Arrivals</span>
      <div class="new-arrivals-card">
-        <img src="/scrum_project/code/pictures/newarrival.png" alt="New Arrival">
+        <img src="pictures/newarrival.png" alt="New Arrival">
         <button class="new-arrivals-button">Shop Now</button>
         <div class="new-arrivals-details">
             <h3>Latest Guitar Models Just In!</h3>
@@ -130,14 +130,14 @@ session_start();
         </div>
 
         <div class="Pages_content">
-            <h3 style="font-size: 20px;">Pages</h3>
+            <h3 class="footerText">Pages</h3>
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
         </div>
         <div class="BackLinks_content">
-            <h3 style="font-size: 20px;">Back Links</h3>
+            <h3 class="footerText">Back Links</h3>
             <p><a href="#">Brand</a></p>
             <p><a href="#">Social Links</a></p>
             <p><a href="#">Company Registration</a></p>
@@ -145,7 +145,7 @@ session_start();
         </div>
 
         <div class="WorkHours_content">
-            <h3 style="font-size: 20px;">Work Hours</h3>
+            <h3 class="footerText">Work Hours</h3>
             <div class="hour">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3-icon lucide-clock-3"><path d="M12 6v6h4"/><circle cx="12" cy="12" r="10"/></svg>
                 <p>24/7</p>

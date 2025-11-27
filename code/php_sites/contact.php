@@ -16,7 +16,7 @@ session_start();
     <link rel="stylesheet" href="/scrum_project/code/css/footer.css">
     <link rel="stylesheet" href="/scrum_project/code/css/contact.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
+    <link rel="icon" href="pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
@@ -31,7 +31,7 @@ session_start();
     </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
-    <img class="logo" src="/scrum_project/code/pictures/logo.png" alt="Logo">
+    <img class="logo" src="pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
     <!-- Search bar -->
@@ -80,7 +80,7 @@ session_start();
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
           <a href="only_php/logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
         <?php else: ?>
-        <a href="only_php/login.php"><i class='bx bxs-user'></i></a>
+        <a href="login.php"><i class='bx bxs-user'></i></a>
         <?php endif; ?>
       </div>
     </div>
@@ -124,7 +124,7 @@ session_start();
             <p>You are always welcome to contact us. Our <br>
         customer service is available Mon-Fri 9:00 a.m.- <br>
     8.00 p.m. and Sat-Sun 10.00 a.m.-6.00 p.m.</p>
-            <form>
+            <form action="" method="post">
                 <input type="text" placeholder="Enter your name*"required> 
                 <input type="text" placeholder="Enter your last name*"required> 
                 <input type="email" placeholder="Enter a valid email adress*"required> 
@@ -157,14 +157,14 @@ session_start();
         </div>
 
         <div class="Pages_content">
-            <h3 style="font-size: 20px;">Pages</h3>
+            <h3 class="footerText">Pages</h3>
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
         </div>
         <div class="BackLinks_content">
-            <h3 style="font-size: 20px;">Back Links</h3>
+            <h3 class="footerText"">Back Links</h3>
             <p><a href="#">Brand</a></p>
             <p><a href="#">Social Links</a></p>
             <p><a href="#">Company Registration</a></p>
@@ -172,7 +172,7 @@ session_start();
         </div>
 
         <div class="WorkHours_content">
-            <h3 style="font-size: 20px;">Work Hours</h3>
+            <h3 class="footerText">Work Hours</h3>
             <div class="hour">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3-icon lucide-clock-3"><path d="M12 6v6h4"/><circle cx="12" cy="12" r="10"/></svg>
                 <p>24/7</p>
