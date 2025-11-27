@@ -10,6 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nature Music</title>
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+<<<<<<< HEAD
     <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
 =======
     <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
