@@ -124,12 +124,13 @@ session_start();
             <p>You are always welcome to contact us. Our <br>
         customer service is available Mon-Fri 9:00 a.m.- <br>
     8.00 p.m. and Sat-Sun 10.00 a.m.-6.00 p.m.</p>
-            <form>
-                <input type="text" placeholder="Enter your name*"required> 
-                <input type="text" placeholder="Enter your last name*"required> 
-                <input type="email" placeholder="Enter a valid email adress*"required> 
-                <input type="tel" placeholder="Enter your phone number*"required> 
-                <textarea placeholder="Write your message*"required></textarea> 
+            <form action="contact_form.php" method="POST">
+
+                <input type="text" name="first_name" placeholder="Enter your name*"required> 
+                <input type="text" name="last_name" placeholder="Enter your last name*"required> 
+                <input type="email" name="email" placeholder="Enter a valid email adress*"required> 
+                <input type="tel" name="phone" placeholder="Enter your phone number*"required> 
+                <textarea name="message" placeholder="Write your message*"required></textarea> 
                 <button type="submit">SUBMIT</button>
             </form>
         </div>
