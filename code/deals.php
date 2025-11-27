@@ -19,7 +19,7 @@ session_start();
     <link rel="stylesheet" href="/scrum_project/code/css/category.css">
     <link rel="stylesheet" href="/scrum_project/code/css/deals.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="pictures/logo.png">
+    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->

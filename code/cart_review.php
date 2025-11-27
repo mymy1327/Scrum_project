@@ -44,7 +44,7 @@ try {
     <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
     <link rel="stylesheet" href="/scrum_project/code/css/cart_review.css">
     <!-- Logo shows next to the page title -->
-    <link rel="icon" href="pictures/logo.png">
+    <link rel="icon" href="/scrum_project/code/pictures/logo.png">
   </head>
   <body>
     <!-- Overlay -->
