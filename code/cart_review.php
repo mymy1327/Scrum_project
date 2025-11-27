@@ -39,7 +39,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nature Music</title>
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
     <link rel="stylesheet" href="/scrum_project/code/css/cart_review.css">
@@ -199,7 +199,7 @@ try {
                             <tr>
                                 <td>
                                     <?php if (!empty($item['product_image'])): ?>
-                                    <img src="<?php echo htmlspecialchars($item['product_image']); ?>" alt="<?php echo htmlspecialchars($item['product_name']); ?>" style="width: 50px; height: 50px; object-fit: cover;">
+                                    <img src="<?php echo htmlspecialchars($item['product_image']); ?>" alt="<?php echo htmlspecialchars($item['product_name']); ?>" style="width: 70px; height: auto; object-fit: cover;">
                                     <?php endif; ?>
                                 </td>
                                 <td><?php echo htmlspecialchars($item['product_name']); ?></td>

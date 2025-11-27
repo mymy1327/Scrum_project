@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nature Music</title>
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
     <link href='https://fonts.google.com/specimen/Karma?query=karma' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
@@ -81,7 +81,7 @@ session_start();
       <div class="cart_login">
         <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-          <a href="only_php/logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
         <?php else: ?>
         <a href="login.php"><i class='bx bxs-user'></i></a>
         <?php endif; ?>
@@ -102,7 +102,7 @@ session_start();
         <span class="deals-title">New Arrivals</span>
      <div class="new-arrivals-card">
         <img src="pictures/newarrival.png" alt="New Arrival">
-        <button class="new-arrivals-button">Shop Now</button>
+        <button class="new-arrivals-button add-to-cart-btn" data-name="Trumpet" data-price="100€" data-image="pictures/newarrival_offer.png">Shop Now</button>
         <div class="new-arrivals-details">
             <h3>Latest Guitar Models Just In!</h3>
             <p>Explore our collection of the newest guitar models from top brands. Find your perfect sound today!</p>
@@ -130,14 +130,14 @@ session_start();
         </div>
 
         <div class="Pages_content">
-            <h3 class="footerText">Pages</h3>
+            <h3 style="font-size: 20px;">Pages</h3>
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
         </div>
         <div class="BackLinks_content">
-            <h3 class="footerText">Back Links</h3>
+            <h3 style="font-size: 20px;">Back Links</h3>
             <p><a href="#">Brand</a></p>
             <p><a href="#">Social Links</a></p>
             <p><a href="#">Company Registration</a></p>
@@ -145,7 +145,7 @@ session_start();
         </div>
 
         <div class="WorkHours_content">
-            <h3 class="footerText">Work Hours</h3>
+            <h3 style="font-size: 20px;">Work Hours</h3>
             <div class="hour">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3-icon lucide-clock-3"><path d="M12 6v6h4"/><circle cx="12" cy="12" r="10"/></svg>
                 <p>24/7</p>
