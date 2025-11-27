@@ -11,7 +11,6 @@ session_start();
     <title>Nature Music</title>
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
-    <link href='https://fonts.google.com/specimen/Karma?query=karma' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
     <link rel="stylesheet" href="/scrum_project/code/css/content.css">
@@ -90,11 +89,12 @@ session_start();
     <!-- Content -->
      <div class="offer-container justify-content-center">
         <span class="deals-title">Deals & Offers</span>
-     <div class="offer-card card">
+     <div class="offer-card">
         <img src="pictures/special offer.png" alt="Special Offer">
+        <button class="offer-button special-offer">Get Them Now!</button>
         <div class="offer-details">
-            <h3>Summer Sale - Up to 30% Off!</h3>
-            <p>Get ready for summer with our exclusive discounts on selected instruments. Limited time offer!</p>
+            <h3>Winter Sale - Up to 30% Off!</h3>
+            <p>Get ready for winter with our exclusive discounts on selected instruments. Limited time offer!</p>
         </div>
             </div>
     </div>
@@ -102,10 +102,10 @@ session_start();
         <span class="deals-title">New Arrivals</span>
      <div class="new-arrivals-card">
         <img src="pictures/newarrival.png" alt="New Arrival">
-        <button class="new-arrivals-button add-to-cart-btn" data-name="Trumpet" data-price="100€" data-image="pictures/newarrival_offer.png">Shop Now</button>
+        <button class="new-arrivals-button add-to-cart-btn" data-name="Trumpet (New arrival)" data-price="100€" data-image="pictures/newarrival_offer.png">Shop Now</button>
         <div class="new-arrivals-details">
-            <h3>Latest Guitar Models Just In!</h3>
-            <p>Explore our collection of the newest guitar models from top brands. Find your perfect sound today!</p>
+            <h3>Latest Trumpet Models Just In!</h3>
+            <p>Explore our newest trumpet models from top brands. Find your perfect sound today!</p>
         </div>
             </div>
     </div>
@@ -130,14 +130,14 @@ session_start();
         </div>
 
         <div class="Pages_content">
-            <h3 style="font-size: 20px;">Pages</h3>
+            <h3 class="footerText">Pages</h3>
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
         </div>
         <div class="BackLinks_content">
-            <h3 style="font-size: 20px;">Back Links</h3>
+            <h3 class="footerText">Back Links</h3>
             <p><a href="#">Brand</a></p>
             <p><a href="#">Social Links</a></p>
             <p><a href="#">Company Registration</a></p>

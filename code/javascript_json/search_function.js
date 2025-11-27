@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 async function removeFromCart(productName) {
     try {
-        const response = await fetch('/scrum_project/code/php_sites/only_php/remove_from_cart.php', {
+        const response = await fetch('remove_from_cart.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -258,6 +258,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    addToCartSpecial();
 });
 
 async function renderCategoryCards(itemContainer, filterCategory = null ) {
@@ -337,7 +339,7 @@ function attachAddToCartListeners() {
             } else {
                 // show error notification
                 if (response.message.includes('Require login')) {
-                    notification.innerHTML = ' Please <a href="/scrum_project/code/php_sites/login.php" class="login-link">log in</a> to add items to your cart.';
+                    notification.innerHTML = ' Please <a href="login.php" class="login-link">log in</a> to add items to your cart.';
                 } else {
                     notification.textContent = `Error: ${response.message}`;
                 }
@@ -352,4 +354,39 @@ function attachAddToCartListeners() {
     });
 };
 
-console.log("Working");
+
+function addToCartSpecial () {
+    const addToCartButton = document.querySelector('.special-offer');
+     
+    addToCartButton.addEventListener('click', async (event)=> {
+        event.preventDefault();
+            const notification = document.getElementById('notification');
+            const productData = sampleData.filter(item => item.category === "special-offer");
+        for (const product of productData) {
+            const respone = await addToCart(product);
+
+            if (respone.success) {
+                    // show success notification
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+
+            } else {
+                // show error notification
+                if (response.message.includes('Require login')) {
+                    notification.innerHTML = ' Please <a href="login.php" class="login-link">log in</a> to add items to your cart.';
+                } else {
+                    notification.textContent = `Error: ${response.message}`;
+                }
+                notification.style.backgroundColor = '#FF4040';
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    notification.style.backgroundColor = '';
+                }, 5000);
+                return;
+            }
+            };
+    });
+};
