@@ -184,7 +184,7 @@ session_start();
     <!-- Cards that show the best sellers -->
     <p class="toinen title">BEST SELLER</p>
     <hr>
-    <div class="container">
+    <div class="best-seller-container container">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-md-4 mb-4">
           <div class="card add-to-cart-btn" data-name="Red Drums" data-price="2400 €" data-image="/scrum_project/code/pictures/redDrums.png">
