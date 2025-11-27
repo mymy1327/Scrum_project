@@ -107,7 +107,7 @@ session_start();
         Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
         versions of Lorem Ipsum.</p>
     </div>
-    <img src="/scrum_project/code/pictures/handondrums.jpg" alt="hands on drums">
+    <img src="pictures/handondrums.jpg" alt="hands on drums">
   </div>
 
     <!-- Footer -->
