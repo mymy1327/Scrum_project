@@ -59,7 +59,7 @@ try {
     </div>
     <div class="nav_bar_container">
       <a href="Navigation_bar.php">
-    <img class="logo" src="/scrum_project/code/pictures/logo.png" alt="Logo">
+    <img class="logo" src="pictures/logo.png" alt="Logo">
 </a>
       <div class="search_nav_link_container">
     <!-- Search bar -->
@@ -119,7 +119,7 @@ try {
         <div class="container">
             <div class="delivery-form">
                 <!-- Form stars -->
-                <form action="/scrum_project/code/php_sites/only_php/save.php" method="post" onsubmit="updateProductsInput()">
+                <form action="/scrum_project/code/save.php" method="post" onsubmit="updateProductsInput()">
                     <h2>Delivery</h2>
                     <div class="row">
                         <!-- Country dropdown -->

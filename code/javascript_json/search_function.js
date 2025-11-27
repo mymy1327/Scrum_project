@@ -3,7 +3,7 @@
         const searchResults = document.getElementById('search-results');
 
         function isUserLoggedIn() {
-    return fetch('/scrum_project/code/php_sites/only_php/check_login.php')
+    return fetch('check_login.php')
         .then(response => {
             // check for network errors
             if (!response.ok) {
@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const notification = document.getElementById('notification');
             
             if (loggedIn) {
-                window.location.href = '/scrum_project/code/php_sites/cart_review.php';
+                window.location.href = '/scrum_project/code/cart_review.php';
             } else {
                 // if not logged in
                 
                 notification.classList.add('show');
 
-                notification.innerHTML = 'Please <a href="/scrum_project/code/php_sites/login.php" class="login-link">log in</a> to view your cart.';
+                notification.innerHTML = 'Please <a href="/scrum_project/code/login.php" class="login-link">log in</a> to view your cart.';
         
                 setTimeout(() => {
                     notification.classList.remove('show');
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // if not logged in
                         notification.classList.add('show');
 
-                        notification.innerHTML = 'Please <a href="/scrum_project/code/php_sites/login.php" class="login-link">log in</a> to add items to your cart.';
+                        notification.innerHTML = 'Please <a href="/scrum_project/code/login.php" class="login-link">log in</a> to add items to your cart.';
                         setTimeout(() => {
                             notification.classList.remove('show');
                         }, 5000);
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: product.picture
             };
             try {
-            const response = await fetch('/scrum_project/code/php_sites/only_php/add_to_cart.php', {
+            const response = await fetch('add_to_cart.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
     <link rel="stylesheet" href="/scrum_project/code/css/footer.css">
-    <link rel="stylesheet" href="/scrum_project/code/css/contact.css">
+    <link rel="stylesheet" href="/scrum_project/code/css/about.css">
     <!-- Logo shows next to the page title -->
     <link rel="icon" href="pictures/logo.png">
   </head>
@@ -86,56 +86,29 @@ session_start();
     </div>
     <!-- Nav ends -->
 
-    <!-- Contact us page content starts -->
-
-    <!-- info on the right -->
-    <div class="contact_page">
-        <div class="contact_details">
-            <h1>Contact details</h1>
-
-            <div class="contact_item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-              <div class="contact_text">
-                <p class="titles">Phone</p>
-                <p class="info">+ 94 76 00 00 000</p>
-              </div>
-            </div>
-
-            <div class="contact_item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-              <div class="contact_text">
-                <p class="titles">Email</p>
-                <p class="info">contact@example.com</p>
-              </div>
-            </div>
-          
-            <div class="contact_item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-              <div class="contact_text">
-                <p class="titles">Address</p>
-                <p class="info">123 Business Street, Suite 100, City,<br>State, ZIP</p>
-              </div>
-            </div>
-        </div>
-
-        <!-- form for sending message -->
-        <div class="send_message">
-            <h1>Send us a message</h1>
-            <p>You are always welcome to contact us. Our <br>
-        customer service is available Mon-Fri 9:00 a.m.- <br>
-    8.00 p.m. and Sat-Sun 10.00 a.m.-6.00 p.m.</p>
-            <form action="" method="post">
-                <input type="text" placeholder="Enter your name*"required> 
-                <input type="text" placeholder="Enter your last name*"required> 
-                <input type="email" placeholder="Enter a valid email adress*"required> 
-                <input type="tel" placeholder="Enter your phone number*"required> 
-                <textarea placeholder="Write your message*"required></textarea> 
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+    <!-- About us page content starts -->
+    <div class="content-wrapper">
+        <h2 class="abouth2">We provide quality products — for music enthusiasts and professionals</h2>
+        <p class="aboutp">Nature Music’s shipping times are incredible—they arrive at your door quickly and securely.</p>
     </div>
-    
-    <!-- Contact us page content ends -->
+    <div class="image-text">
+      <div class="text-content">
+        <p class="ptitle"><strong>We have a wide range of products</strong></p>
+        <p class="aboutp2">Our instruments are crafted with precision, offering high-quality sound for both beginners and 
+        professionals. Every order is handled with care, ensuring it reaches you safely and promptly. 
+        We believe music should be accessible to everyone, so we provide the best customer service and 
+        support to make your experience flawless.</p>
+        <br>
+        <p class="aboutp3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+        printer took a galley of type and scrambled it to make a type specimen book. It has survived
+        not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+        Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+        versions of Lorem Ipsum.</p>
+    </div>
+    <img src="pictures/handondrums.jpg" alt="hands on drums">
+  </div>
 
     <!-- Footer -->
     <footer>
@@ -143,7 +116,7 @@ session_start();
     <div class="footer-container">
 
         <div class="text">
-            <a href="Navigation_bar.php"><img src="/scrum_project/code/pictures/logo.png" alt="Nature Music"></a>
+            <a href="Navigation_bar.php"><img src="pictures/logo.png" alt="Nature Music"></a>
             <p>Lorem ipsum dolor sit amet consectetur. <br>
             Consequat fermentum viverra auctor nibh <br> eleifend sed lorem. </p>
 
