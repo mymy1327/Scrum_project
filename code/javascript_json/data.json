@@ -1,98 +1,98 @@
 [
     {
-        "picture": "/scrum_project/code/pictures/guitar.png",
+        "picture": "pictures/guitar.png",
         "name": "Guitar",
         "price": "500 €",
         "category": "string-instruments"
     },
     {
-        "picture":"/scrum_project/code/pictures/drums.png",
+        "picture":"pictures/drums.png",
         "name":"Drum",
         "price": "1200 €",
         "category": "drums"
     },
     {
-        "picture":"/scrum_project/code/pictures/electricguitar.png",
+        "picture":"pictures/electricguitar.png",
         "name":"Electric Guitar",
         "price":"700 €",
         "category": "string-instruments"
     },
     {
-        "picture":"/scrum_project/code/pictures/loudspeakers.png",
+        "picture":"pictures/loudspeakers.png",
         "name":"Loudspeakers",
         "price":"1500 €",
         "category": "studio"
     },
     {
-        "picture":"/scrum_project/code/pictures/microphone.png",
+        "picture":"pictures/microphone.png",
         "name":"Microphone",
         "price":"600 €",
         "category": "sound-audio"
     },
     {
-        "picture":"/scrum_project/code/pictures/piano.png",
+        "picture":"pictures/piano.png",
         "name":"Piano",
         "price":"3000 €",
         "category": "keyboards"
     },
     {
-        "picture":"/scrum_project/code/pictures/redDrums.png",
+        "picture":"pictures/redDrums.png",
         "name":"Red Drums",
         "price":"2400 €",
         "category": "drums"
     },
     {
-        "picture":"/scrum_project/code/pictures/violin.png",
+        "picture":"pictures/violin.png",
         "name":"Violin",
         "price":"800 €",
         "category": "string-instruments"
     },
     {
-        "picture":"/scrum_project/code/pictures/trumpet.png",
+        "picture":"pictures/trumpet.png",
         "name":"Trumpet",
         "price":"200 €",
         "category": "wind-instruments"
     },
     {
-        "picture":"/scrum_project/code/pictures/triangle.png",
+        "picture":"pictures/triangle.png",
         "name":"Triangle",
         "price":"50 €",
         "category": "drums"
     },
     {
-        "picture":"/scrum_project/code/pictures/maraca.png",
+        "picture":"pictures/maraca.png",
         "name":"Maraca",
         "price":"300 €",
         "category": "drums"
     },
     {
-        "picture":"/scrum_project/code/pictures/harp.png",
+        "picture":"pictures/harp.png",
         "name":"Harp",
         "price":"800 €",
         "category": "string-instruments"
     },
     {
-        "picture":"/scrum_project/code/pictures/accordion.png",
+        "picture":"pictures/accordion.png",
         "name":"Accordion",
         "price":"400 €",
         "category": "wind-instruments"
     },
     {
-        "picture":"/scrum_project/code/pictures/clarinet.png",
+        "picture":"pictures/clarinet.png",
         "name":"Clarinet",
         "price":"350 €",
         "category": "wind-instruments"
     },
 
     {
-        "picture":"/scrum_project/code/pictures/speaker.png",
+        "picture":"pictures/speaker.png",
         "name":"Speaker",
         "price":"500 €",
         "category": "studio"
     },
 
     {
-        "picture":"/scrum_project/code/pictures/speakers.png",
+        "picture":"pictures/speakers.png",
         "name":"Speakers",
         "price":"2650 €",
         "category": "home-studio"
