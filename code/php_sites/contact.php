@@ -80,7 +80,7 @@ session_start();
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
           <a href="only_php/logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
         <?php else: ?>
-        <a href="only_php/login.php"><i class='bx bxs-user'></i></a>
+        <a href="login.php"><i class='bx bxs-user'></i></a>
         <?php endif; ?>
       </div>
     </div>
@@ -124,7 +124,7 @@ session_start();
             <p>You are always welcome to contact us. Our <br>
         customer service is available Mon-Fri 9:00 a.m.- <br>
     8.00 p.m. and Sat-Sun 10.00 a.m.-6.00 p.m.</p>
-            <form>
+            <form action="" method="post">
                 <input type="text" placeholder="Enter your name*"required> 
                 <input type="text" placeholder="Enter your last name*"required> 
                 <input type="email" placeholder="Enter a valid email adress*"required> 
