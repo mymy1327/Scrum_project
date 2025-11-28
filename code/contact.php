@@ -1,3 +1,4 @@
+<!-- collect form informations -->
 <?php
 session_start();
 
@@ -230,7 +231,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/scrum_project/code/javascript_json/search_function.js"></script>
 
-
+<!-- push notification -->
 <script>
 <?php if (isset($_SESSION['message'])): ?>
     document.addEventListener('DOMContentLoaded', function() {
@@ -238,7 +239,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         notification.className = 'notification-popup <?php echo $_SESSION["message"]; ?>';
         notification.textContent = <?php 
             if ($_SESSION['message'] === 'success') {
-                echo '"Responses sent successfully!"';
+                echo '"Thanks for your message! "';
             } else {
                 echo '"Error: Could not send message."';
             }
