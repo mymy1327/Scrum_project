@@ -1,6 +1,39 @@
 <?php
 session_start();
- 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "user_controller";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        $_SESSION['message'] = "error";
+    } else {
+        $first_name = $_POST["first_name"];
+        $last_name = $_POST["last_name"];
+        $email = $_POST["email"];
+        $phone = $_POST["phone"];
+        $message = $_POST["message"];
+        
+        $stmt = $conn->prepare("INSERT INTO contact_messages (first_name, last_name, email, phone, message) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $first_name, $last_name, $email, $phone, $message);
+
+        if ($stmt->execute()) {
+            $_SESSION['message'] = "success";
+        } else {
+            $_SESSION['message'] = "error";
+        }
+
+        $stmt->close();
+        $conn->close();
+    }
+    
+    header("Location: contact.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -124,13 +157,13 @@ session_start();
             <p>You are always welcome to contact us. Our <br>
         customer service is available Mon-Fri 9:00 a.m.- <br>
     8.00 p.m. and Sat-Sun 10.00 a.m.-6.00 p.m.</p>
-            <form action="contact_form.php" method="POST">
+            <form action="contact.php" method="POST">
 
-                <input type="text" name="first_name" placeholder="Enter your name*"required> 
-                <input type="text" name="last_name" placeholder="Enter your last name*"required> 
-                <input type="email" name="email" placeholder="Enter a valid email adress*"required> 
-                <input type="tel" name="phone" placeholder="Enter your phone number*"required> 
-                <textarea name="message" placeholder="Write your message*"required></textarea> 
+                <input type="text" name="first_name" placeholder="Enter your name*" required> 
+                <input type="text" name="last_name" placeholder="Enter your last name*" required> 
+                <input type="email" name="email" placeholder="Enter a valid email adress*" required> 
+                <input type="tel" name="phone" placeholder="Enter your phone number*" required> 
+                <textarea name="message" placeholder="Write your message*" required></textarea> 
                 <button type="submit">SUBMIT</button>
             </form>
         </div>
@@ -196,5 +229,30 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/scrum_project/code/javascript_json/search_function.js"></script>
+
+
+<script>
+<?php if (isset($_SESSION['message'])): ?>
+    document.addEventListener('DOMContentLoaded', function() {
+        const notification = document.createElement('div');
+        notification.className = 'notification-popup <?php echo $_SESSION["message"]; ?>';
+        notification.textContent = <?php 
+            if ($_SESSION['message'] === 'success') {
+                echo '"Responses sent successfully!"';
+            } else {
+                echo '"Error: Could not send message."';
+            }
+        ?>;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
+    });
+    <?php unset($_SESSION['message']); ?>
+<?php endif; ?>
+</script>
+
 </body>
 </html>
