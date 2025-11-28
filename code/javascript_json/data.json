@@ -31,7 +31,7 @@
     },
     {
         "picture":"pictures/piano.png",
-        "name":"Piano",
+        "name":"Grand piano",
         "price":"3000 €",
         "category": "keyboards"
     },
@@ -117,6 +117,33 @@
         "name":"Triangle (special offer)",
         "price":"35€",
         "category":"special-offer"
-    }
+    },
 
+    {
+        "picture":"pictures/synthetizer.png",
+        "name":"Synthetizer",
+        "price":"1400€",
+        "category":"keyboards"
+    },
+
+    {
+        "picture":"pictures/upright_piano.png",
+        "name":"Upright piano",
+        "price":"3600€",
+        "category":"keyboards"
+    },
+
+    {
+        "picture":"pictures/studio_microphone.png",
+        "name":"Studio microphone",
+        "price":"1850€",
+        "category":"sound-audio"
+    },
+
+    {
+        "picture":"pictures/home_cinema.png",
+        "name":"Home cinema",
+        "price":"1200€",
+        "category":"home-studio"
+    }
 ]
