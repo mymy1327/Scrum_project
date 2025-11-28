@@ -50,13 +50,8 @@
     .purchase_text {
     font-size: 25px !important;
     top: 50% !important;
-    transform: translate(23%, 5%) !important;
+    transform: translate(23%, 10%) !important;
     }
-    .free_text {
-    font-size: 20px !important;
-    top: 50% !important;
-    transform: translate(-15%, 15%) !important;
-}
     .logo {
         max-width: 150px;
         padding-right: 10px;
@@ -379,18 +374,7 @@
     position: absolute;
     font-size: 40px;
     top: 50%;
-    transform: translate(23%, 0%);
-}
-.free_text {
-    z-index: 1;
-    color: white;
-    font-weight: bold;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    z-index: 1;
-    position: absolute;
-    font-size: 30px;
-    top: 50%;
-    transform: translate(-15%, 15%);
+    transform: translate(11%, 0%);
 }
 /* An overlay cover the content when user give input into search bar */
 .overlay {
@@ -457,4 +441,88 @@ body {
     color:#00B2FF;
     padding-left: 3px;
     padding-right: 3px;
+}
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .nav_bar_container {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .logo {
+        max-width: 150px;
+        padding: 0;
+    }
+
+    .search_nav_link_container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search_bar {
+        width: 100% !important;
+        max-width: none;
+    }
+
+    .cart_login {
+        margin-right: 0;
+        order: 2;
+    }
+
+    /* Banner */
+    .banner_image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .banner_text_top,
+    .banner_text_bottom {
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 28px !important;
+        line-height: 1.2;
+        white-space: normal;
+    }
+
+    .banner_text_top {
+        top: 12%;
+    }
+
+    .banner_text_bottom {
+        top: 26%;
+    }
+
+    /* Warranty banner*/
+    .warranty_container {
+        bottom: 10px;
+        left: 50%;
+        width: 90%;
+        max-width: 420px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .delivery,
+    .interest,
+    .warranty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .special_text {
+        font-size: 40px !important;
+    }
 }

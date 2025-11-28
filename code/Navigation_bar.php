@@ -119,7 +119,6 @@ session_start();
     <div class="line_container row">
       <div class="line"></div>
       <h2 class="special_text">Special</h2>
-      <p class="free_text">Free Guitar Lessons!</p>
       <p class="purchase_text">Purchase any guitar over $500 and receive a one hour guitar lesson free.</p>
     </div>
     
