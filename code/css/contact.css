@@ -27,7 +27,7 @@
     background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%);
 }
 
-.contact_details *{
+.contact_details * {
     position: relative;
     z-index: 1;
 }
@@ -39,7 +39,7 @@
 }
 
 .contact_details h1 {
-    font-size: 2.5 rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -91,7 +91,7 @@
 }
 
 .send_message h1 {
-    font-size: 2.5 rem;
+    font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
 }
@@ -122,4 +122,28 @@
 .contact_text p {
     margin: 0;
     margin-bottom: 10px;
+}
+
+/* notification when responses sent*/
+
+.notification-popup {
+    position: fixed;
+    top: 80px;
+    right: 80px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.notification-popup.success {
+    background-color: #10b981;
+    color: white;
+}
+
+.notification-popup.error {
+    background-color: #ef4444;
+    color: white;
 }
