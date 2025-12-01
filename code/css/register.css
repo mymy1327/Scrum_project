@@ -2,6 +2,7 @@ body {
     background-image: url('/scrum_project/code/pictures/image.png');
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh !important;
 }
 form {
     width: 30%;
@@ -55,4 +56,16 @@ a {
 p {
     color: white;
     font-size: 15px;
+}
+
+@media (max-width: 680px) {
+    body {
+        background-image: url('/scrum_project/code/pictures/image2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .user-input, .password-input {
+        padding: 10px 0 10px 0;
+    } 
 }
