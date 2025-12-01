@@ -39,6 +39,9 @@ form {
     font-size: 16px;
     cursor: pointer;
 }
+.submit-button:hover {
+    background-color: #383bd1;
+}
 ::placeholder {
     color: white;
     opacity: 0.7;

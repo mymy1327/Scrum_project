@@ -14,3 +14,26 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+
+@media (max-width: 680px) {
+    /* Card height changes */
+    .card-for-each-product {
+        width: 15rem !important;
+        height: 26rem;
+    }
+    /* Make images fit the space and look good */
+    .card-img-top {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: contain;
+    }
+    /* Last card has some space under it */
+    .card-for-each-product:last-child {
+        margin-bottom: 10% !important;
+    }
+    /* First card has space on top of it */
+    .card-for-each-product:first-child {
+        margin-top: 6% !important;
+    }
+}
