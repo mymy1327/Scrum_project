@@ -136,14 +136,10 @@ body {
 
 /* Responsive for different devices */
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
     .container2 {
         flex-direction: column;
         width: 95%;
-        margin-top: 10px;
+        margin-top: 5%;
     }
 
     #root {
@@ -156,6 +152,7 @@ body {
         width: 100%;
         margin-left: 0;
         margin-top: 20px;
+        margin-bottom: 10%;
     }
 
     .cart-total {
@@ -202,7 +199,7 @@ body {
     margin-left: 0;
 }
 
-/* Location of container (I want it to the left and slightly up so it is in line with 'my cart' but it doesn't work for some reason) */
+/* Location of container */
 .container {
     max-width: none !important;
     margin-left: 0 !important;
