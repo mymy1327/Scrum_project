@@ -118,9 +118,8 @@ try {
     <!-- My cart -->
     <div class="container2">
         <div class="container">
-            <div class="delivery-form">
-                <!-- Form stars -->
-                <form action="/scrum_project/code/save.php" method="post" onsubmit="updateProductsInput()">
+            <form action="save.php" method="post" onsubmit="updateProductsInput()">
+                <div class="delivery-form">
                     <h2>Delivery</h2>
                     <div class="row">
                         <!-- Country dropdown -->
@@ -170,65 +169,63 @@ try {
                         <label for="phone"></label>
                         <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" required>
                     </div>
-                    <!-- My cart things -->
                 </div>
-            </div>
-            <div id="root"></div>
-            <div class="sidebar">
-                <?php if (!empty($errorMessage)): ?>
-                    <p style="color: red;"><?php echo $errorMessage; ?></p>
-                <?php elseif (empty($cartItems)): ?>
-                    <p>Your cart is empty</p>
-                <?php else: ?>
-                    <div class="head"><p class="my_cart">My Cart</p></div>
-                    <?php $total = 0; ?>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th></th>  <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($cartItems as $item): 
-                            $item_price_float = (float)$item['product_price'];
-                            $item_quantity_int = intval($item['quantity']);
-                            $total += $item_price_float * $item_quantity_int;
-                        ?>
-                            <tr>
-                                <td>
-                                    <?php if (!empty($item['product_image'])): ?>
-                                    <img src="<?php echo htmlspecialchars($item['product_image']); ?>" alt="<?php echo htmlspecialchars($item['product_name']); ?>" style="width: 70px; height: auto; object-fit: cover;">
-                                    <?php endif; ?>
-                                </td>
-                                <td><?php echo htmlspecialchars($item['product_name']); ?></td>
-                                <td><?php echo $item_quantity_int; ?></td>
-                                <td><?php echo number_format($item_price_float, 2); ?>€</td>
+                <div id="root"></div>
+                <div class="sidebar">
+                    <?php if (!empty($errorMessage)): ?>
+                        <p style="color: red;"><?php echo $errorMessage; ?></p>
+                    <?php elseif (empty($cartItems)): ?>
+                        <p>Your cart is empty</p>
+                    <?php else: ?>
+                        <div class="head"><p class="my_cart">My Cart</p></div>
+                        <?php $total = 0; ?>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>  <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach ($cartItems as $item): 
+                                $item_price_float = (float)$item['product_price'];
+                                $item_quantity_int = intval($item['quantity']);
+                                $total += $item_price_float * $item_quantity_int;
+                            ?>
+                                <tr>
+                                    <td>
+                                        <?php if (!empty($item['product_image'])): ?>
+                                        <img src="<?php echo htmlspecialchars($item['product_image']); ?>" alt="<?php echo htmlspecialchars($item['product_name']); ?>" style="width: 70px; height: auto; object-fit: cover;">
+                                        <?php endif; ?>
+                                    </td>
+                                    <td><?php echo htmlspecialchars($item['product_name']); ?></td>
+                                    <td><?php echo $item_quantity_int; ?></td>
+                                    <td><?php echo number_format($item_price_float, 2); ?>€</td>
 
-                                <td>
-                                    <i class="bx bxs-trash delete-item-icon" 
-                                        data-product-name="<?php echo htmlspecialchars($item['product_name']); ?>">
-                                    </i>
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                    <div class="foot">
-                        <h3>Total</h3>
-                        <h2 id="total"><?php echo number_format($total,2); ?>€</h2>
-                    </div>
-                <?php endif; ?>
-              <input type="hidden" name="products" id="products" value="[]">
-              <script>
-                const cart = <?php echo json_encode($cartItems); ?>;
-              </script>
-              <button class='checkout' type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
-            </div>
-        </div>
-    </form>
+                                    <td>
+                                        <i class="bx bxs-trash delete-item-icon" 
+                                            data-product-name="<?php echo htmlspecialchars($item['product_name']); ?>">
+                                        </i>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                        <div class="foot">
+                            <h3>Total</h3>
+                            <h2 id="total"><?php echo number_format($total,2); ?>€</h2>
+                        </div>
+                    <?php endif; ?>
+                  <input type="hidden" name="products" id="products" value="[]">
+                  <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                  <script>
+                    const cart = <?php echo json_encode($cartItems); ?>;
+                  </script>
+                  <button class='checkout' type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
+                </div>
+            </form>
     <!-- Form ends -->
     </div>
     <!-- Footer -->
