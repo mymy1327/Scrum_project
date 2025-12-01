@@ -145,5 +145,54 @@
         "name":"Home cinema",
         "price":"1200€",
         "category":"home-studio"
+    },
+
+    {
+        "picture":"pictures/audio_mixer.png",
+        "name":"Audio mixer",
+        "price":"1290€",
+        "category":"sound-audio"
+    },
+
+    {
+        "picture":"pictures/headphones.png",
+        "name":"Headphones",
+        "price":"200€",
+        "category":"home-studio"
+    },
+
+    {
+        "picture":"pictures/bluetooth_speaker.png",
+        "name":"Bluetooth speaker",
+        "price":"200€",
+        "category":"home-studio"
+    },
+
+    {
+        "picture":"pictures/saxophone.png",
+        "name":"Saxophone",
+        "price":"1900€",
+        "category":"wind-instruments"
+    },
+
+    {
+        "picture":"pictures/audio_interface.png",
+        "name":"Audio interface",
+        "price":"500€",
+        "category":"studio"
+    },
+
+    {
+        "picture":"pictures/ukulele.png",
+        "name":"Ukulele",
+        "price":"300€",
+        "category":"string-instruments"
+    },
+
+    {
+        "picture":"pictures/xylophone.png",
+        "name":"Xylophone",
+        "price":"1350€",
+        "category":"drums"
     }
 ]
