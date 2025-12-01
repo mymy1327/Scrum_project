@@ -14,11 +14,13 @@ footer {
   padding: 20px 100px;
 }
 
+/* How links, texts, and logo is set */
 .footer-container {
   display: flex;
-  gap: 120px;
-  border-bottom: 2px solid rgb(187, 187, 187);
+  flex-wrap: wrap;
+  gap: 40px;
   justify-content: center;
+  border-bottom: 2px solid rgb(187, 187, 187);
   margin: 0 auto;
 }
 
@@ -30,22 +32,18 @@ footer {
   margin-bottom: 30px;
 }
 
+/* Copyright and Terms of Use/Privacy Policy adjustment */
 .low {
   display: flex;
-  margin-top: 50px;
   justify-content: space-between;
-
-}
-
-/* Logo size */
-.text img {
-  width: 140px;
+  margin-top: 20px;
 }
 
 /* Social media icons */
 .icon {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  margin-top: 50px;
 }
 
 /* Work hours */
@@ -98,4 +96,21 @@ footer {
 
 .icon a:hover {
   opacity: 0.8;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px;
+  }
+
+  .footer-container {
+    gap: 20px;
+  }
+
+  .low {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 }

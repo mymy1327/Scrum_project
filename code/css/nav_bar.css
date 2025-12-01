@@ -1,3 +1,7 @@
+body {
+    min-height: 100vh;
+}
+
 @media (max-width: 1200px) {
     /* Center and scale banner text on small screens */
     .banner_text_top,

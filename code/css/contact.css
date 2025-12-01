@@ -1,7 +1,8 @@
 .contact_page {
     display: flex;
     flex-wrap: wrap;
-    min-height: 90vh;
+    min-height: 100vh;
+    margin-top: 2%;
 }
 
 /* contact details left */
@@ -146,4 +147,18 @@
 .notification-popup.error {
     background-color: #ef4444;
     color: white;
+}
+
+footer {
+    margin-top: 5%;
+}
+
+@media (max-width: 680px) {
+    .send_message {
+        margin-top: 8%;
+    }
+
+    .send_message button {
+        margin-bottom: 10%;
+    }
 }
