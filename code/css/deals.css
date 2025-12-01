@@ -115,6 +115,11 @@
     .deals-title {
         font-size: 25px;
         max-width: 50%;
+        margin-top: 5%;
+    }
+
+    .deals {
+        margin-top: 2%;
     }
 
     .offer-button {
@@ -130,6 +135,10 @@
 
     .offer-details p, .new-arrivals-details p {
         margin-left: 3%;
+    }
+
+    .new-arrivals-details p {
+        margin-bottom: 7%;
     }
 
     .new-arrivals-button {

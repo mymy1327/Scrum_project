@@ -88,7 +88,7 @@ session_start();
     </div>
     <!-- Content -->
      <div class="offer-container justify-content-center">
-        <span class="deals-title">Deals & Offers</span>
+        <span class="deals-title deals">Deals & Offers</span>
      <div class="offer-card">
         <img src="pictures/special offer.png" alt="Special Offer">
         <button class="offer-button special-offer">Get Them Now!</button>
