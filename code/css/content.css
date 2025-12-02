@@ -147,6 +147,9 @@ hr {
 .image-text {
     margin: 0;
 }
+a{
+    text-decoration: none !important;
+}
 
 @media (max-width: 768px) {
     .container2 {
