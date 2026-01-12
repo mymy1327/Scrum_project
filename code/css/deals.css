@@ -65,7 +65,7 @@
 .new-arrivals-button {
     z-index: 4;
     position: absolute;
-    top: 72%;
+    top: 68%;
     left: 25%;
     transform: translate(-50%, -50%);
     padding: 30px 70px;
@@ -96,9 +96,13 @@
     font-size: 15px;
 }
 
+.new-arrivals-details p {
+    margin-bottom: 5%;
+}
+
 @media  (min-width: 701px) {
     .offer-button {
-        top: 87%;
+        top: 80%;
     }
 
     .deals-title::before, .deals-title::after {
@@ -144,6 +148,6 @@
     .new-arrivals-button {
         padding: 5px 15px;
         font-size: 23px;
-        top: 63%;
+        top: 60%;
     }
 }

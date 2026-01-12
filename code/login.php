@@ -113,7 +113,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <span stlye="opacity: <?php echo $opacity; ?>"><?php echo $password_err; ?></span>
 
         <button class="submit-button" type="submit" value="sign up" >Login</button>
-        <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+        <p>
+            Don't have an account?<a href="register.php"> Sign up now </a>| <a href="Navigation_bar.php"> Main page</a>
+        </p>
     </form>
 </body>
 </html>

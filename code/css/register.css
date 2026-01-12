@@ -56,6 +56,9 @@ a {
     text-decoration: none;
     border-bottom: 1px solid black;
 }
+a:hover {
+    color: rgb(41, 41, 41);
+}
 p {
     color: white;
     font-size: 15px;
