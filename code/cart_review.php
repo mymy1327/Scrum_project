@@ -107,7 +107,7 @@ try {
       <div class="cart_login">
         <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-          <a href="only_php/logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
         <?php else: ?>
         <a href="login.php"><i class='bx bxs-user'></i></a>
         <?php endif; ?>
