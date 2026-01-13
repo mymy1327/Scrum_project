@@ -116,8 +116,8 @@ try {
     <!-- Nav ends -->
 
     <!-- My cart -->
-    <div class="container2">
-        <div class="container">
+    <div class="container2 row">
+        <div class="container col-md-5">
             <form action="save.php" method="post" onsubmit="updateProductsInput()">
                 <div class="delivery-form">
                     <h2>Delivery</h2>
@@ -169,9 +169,9 @@ try {
                         <label for="phone"></label>
                         <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" required>
                     </div>
-                </div>
-                <div id="root"></div>
-                <div class="sidebar">
+                </div></form></div>
+                <div class="col-1"></div>
+                <div class="sidebar col">
                     <?php if (!empty($errorMessage)): ?>
                         <p style="color: red;"><?php echo $errorMessage; ?></p>
                     <?php elseif (empty($cartItems)): ?>
@@ -225,7 +225,7 @@ try {
                   </script>
                   <button class='checkout' type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
                 </div>
-            </form>
+            
     <!-- Form ends -->
     </div>
     <!-- Footer -->
@@ -234,7 +234,7 @@ try {
     <div class="footer-container">
 
         <div class="text">
-            <a href="Navigation_bar.php"><img src="/scrum_project/code/pictures/logo.png" alt="Nature Music"></a>
+            <a href="Navigation_bar.php"><img src="pictures/logo.png" alt="Nature Music"></a>
             <p>Lorem ipsum dolor sit amet consectetur. <br>
             Consequat fermentum viverra auctor nibh <br> eleifend sed lorem. </p>
 
@@ -248,14 +248,14 @@ try {
         </div>
 
         <div class="Pages_content">
-            <h3 class="footerText">Pages</h3>
+            <h3 style="font-size: 20px;">Pages</h3>
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
         </div>
         <div class="BackLinks_content">
-            <h3 class="footerText">Back Links</h3>
+            <h3 style="font-size: 20px;">Back Links</h3>
             <p><a href="#">Brand</a></p>
             <p><a href="#">Social Links</a></p>
             <p><a href="#">Company Registration</a></p>

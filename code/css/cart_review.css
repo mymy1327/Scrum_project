@@ -117,7 +117,7 @@ body {
 
 /* Products card with gray background */
 .sidebar{
-    width: 60%;
+    width: 50%;
     border-radius: 5px;
     background-color: #eee;
     margin-left: 20px;
@@ -181,7 +181,7 @@ body {
     }
 
     .container {
-        flex-direction: column;
+        flex-direction: row !important;
     }
 
     .delivery-form, .sidebar {
@@ -212,4 +212,7 @@ body {
     font-size: 24px;
     color:#3D4041;
     cursor: pointer;
+}
+.col-md-5 {
+    margin-right: 0 !important;
 }
