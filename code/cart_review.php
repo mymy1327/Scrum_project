@@ -169,7 +169,7 @@ try {
                         <label for="phone"></label>
                         <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" required>
                     </div>
-                </div></form></div>
+                </div></div>
                 <div class="col-1"></div>
                 <div class="sidebar col">
                     <?php if (!empty($errorMessage)): ?>
@@ -225,7 +225,7 @@ try {
                   </script>
                   <button class='checkout' type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
                 </div>
-            
+            </form>
     <!-- Form ends -->
     </div>
     <!-- Footer -->
