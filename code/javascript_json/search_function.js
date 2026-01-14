@@ -63,11 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchResults.style.display = 'block';
 
                 // filter 
-                const filteredResults = sampleData.filter(item => {
-                    const itemName = item.name ? item.name.toLowerCase() : '';
+                const filteredResults = searchProducts(sampleData, query);
 
-                    return itemName.includes(query);
-                });
 
                 renderResults(filteredResults);
             } else {
