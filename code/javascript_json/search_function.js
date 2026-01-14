@@ -1,8 +1,23 @@
-        const searchInput = document.getElementById('search-input');
-        const overlay = document.getElementById('overlay');
-        const searchResults = document.getElementById('search-results');
+async function loadSampleData() {
+    if (sampleData.length > 0) return sampleData;
 
-        function isUserLoggedIn() {
+    try {
+        const response = await fetch('/scrum_project/code/javascript_json/data.json');
+        if (!response.ok) throw new Error('Failed to load data');
+
+        sampleData = await response.json();
+        return sampleData;
+    } catch (error) {
+        console.error('Error loading search data:', error);
+        return [];
+    }
+}
+
+const searchInput = document.getElementById('search-input');
+const overlay = document.getElementById('overlay');
+const searchResults = document.getElementById('search-results');
+
+function isUserLoggedIn() {
     return fetch('check_login.php')
         .then(response => {
             // check for network errors
@@ -20,30 +35,35 @@
         });
 }
 document.addEventListener('DOMContentLoaded', () => {
-    attachAddToCartListeners();
+    if (searchInput) {
+        searchInput.addEventListener('input', handleSearch);
+    }
 });
 // avoid user enter the cart page when not logged in
-        const cartIcon = document.getElementById('cart_icon');
-        cartIcon.addEventListener('click', async (event) => {
-            event.preventDefault(); // prevent default link behavior
-            const loggedIn = await isUserLoggedIn();
-            const notification = document.getElementById('notification');
-            
-            if (loggedIn) {
-                window.location.href = '/scrum_project/code/cart_review.php';
-            } else {
-                // if not logged in
-                
-                notification.classList.add('show');
+const cartIcon = document.getElementById('cart_icon');
 
-                notification.innerHTML = 'Please <a href="/scrum_project/code/login.php" class="login-link">log in</a> to view your cart.';
-        
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 5000);
+        if (cartIcon) {
+            cartIcon.addEventListener('click', async (event) => {
+                event.preventDefault();
+
+                const loggedIn = await isUserLoggedIn();
+                const notification = document.getElementById('notification');
+
+                if (loggedIn) {
+                    window.location.href = '/scrum_project/code/cart_review.php';
+                } else {
+                    notification.classList.add('show');
+                    notification.innerHTML =
+                        'Please <a href="/scrum_project/code/login.php" class="login-link">log in</a> to view your cart.';
+
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                    }, 5000);
+                }
+            });
         }
-    });
-        //Take information from json
+
+        // take information from json
         let sampleData = [];
         fetch('/scrum_project/code/javascript_json/data.json')
         .then(response => {
@@ -52,32 +72,39 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             sampleData = data;
         })
-
-        //Search for products
-        function handleSearch() {
-            const query = searchInput.value.trim().toLowerCase();
-
-            if (query.length > 0) {
-                // Show overlay and results
-                overlay.style.display = 'block';
-                searchResults.style.display = 'block';
-
-                // filter 
-                const filteredResults = searchProducts(sampleData, query);
-
-
-                renderResults(filteredResults);
-            } else {
-                overlay.style.display = 'none';
-                searchResults.style.display = 'none';
-
-                searchResults.innerHTML = '';
-            }
+        
+        function searchProducts(products, query) {
+            return products.filter(product =>
+                product.name.toLowerCase().includes(query) ||
+                product.category?.toLowerCase().includes(query)
+            );
         }
 
-        /**
-         * Add result into <ul> element and show them in a list
-         */
+
+        // search for products
+        async function handleSearch() {
+            const query = searchInput.value.trim().toLowerCase();
+
+            if (!query) {
+                overlay.style.display = 'none';
+                searchResults.style.display = 'none';
+                searchResults.innerHTML = '';
+                return;
+            }
+
+            // ensure data is loaded
+            const data = await loadSampleData();
+
+            const filteredResults = searchProducts(data, query);
+
+            overlay.style.display = 'block';
+            searchResults.style.display = 'block';
+
+            renderResults(filteredResults);
+        }
+
+
+        // add result into <ul> element and show them in a list
         function renderResults(results) {
 
             searchResults.innerHTML = '';
@@ -121,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 notification.classList.remove('show');
                             }, 2000);
                         } else {
-                            //Failed to add to cart
+                            // failed to add to cart
                             notification.classList.add('show');
                             notification.textContent = response.message || 'Error: could not add to cart.';
                             notification.style.backgroundColor = '#FF4040';
@@ -199,7 +226,7 @@ async function removeFromCart(productName) {
 
         const data = await response.json();
         
-        // Update cart UI if removal was successful
+        // update cart UI if removal was successful
         if (data.success) {
             // show notification
             const notification = document.getElementById('notification');
@@ -354,36 +381,43 @@ function attachAddToCartListeners() {
 
 function addToCartSpecial () {
     const addToCartButton = document.querySelector('.special-offer');
-     
-    addToCartButton.addEventListener('click', async (event)=> {
-        event.preventDefault();
-            const notification = document.getElementById('notification');
-            const productData = sampleData.filter(item => item.category === "special-offer");
-        for (const product of productData) {
-            const respone = await addToCart(product);
 
-            if (respone.success) {
-                    // show success notification
+    // stop if element is not on this page
+    if (!addToCartButton) {
+        return;
+    }
+
+    addToCartButton.addEventListener('click', async (event) => {
+        event.preventDefault();
+
+        const notification = document.getElementById('notification');
+        const productData = sampleData.filter(item => item.category === "special-offer");
+
+        for (const product of productData) {
+            const response = await addToCart(product);
+
+            if (response.success) {
                 notification.classList.add('show');
                 setTimeout(() => {
                     notification.classList.remove('show');
                 }, 2000);
-
             } else {
-                // show error notification
-                if (response.message.includes('Require login')) {
-                    notification.innerHTML = ' Please <a href="login.php" class="login-link">log in</a> to add items to your cart.';
+                if (response.message?.includes('Require login')) {
+                    notification.innerHTML =
+                        'Please <a href="login.php" class="login-link">log in</a> to add items to your cart.';
                 } else {
                     notification.textContent = `Error: ${response.message}`;
                 }
+
                 notification.style.backgroundColor = '#FF4040';
                 notification.classList.add('show');
+
                 setTimeout(() => {
                     notification.classList.remove('show');
                     notification.style.backgroundColor = '';
                 }, 5000);
                 return;
             }
-            };
+        }
     });
-};
+}
