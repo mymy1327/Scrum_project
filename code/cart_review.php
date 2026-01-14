@@ -32,7 +32,7 @@ try {
 }
 ?> 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -107,7 +107,7 @@ try {
       <div class="cart_login">
         <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-          <a href="only_php/logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
         <?php else: ?>
         <a href="login.php"><i class='bx bxs-user'></i></a>
         <?php endif; ?>
@@ -116,8 +116,8 @@ try {
     <!-- Nav ends -->
 
     <!-- My cart -->
-    <div class="container2">
-        <div class="container">
+    <div class="container2 row">
+        <div class="container col-md-5">
             <form action="save.php" method="post" onsubmit="updateProductsInput()">
                 <div class="delivery-form">
                     <h2>Delivery</h2>
@@ -169,9 +169,9 @@ try {
                         <label for="phone"></label>
                         <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" required>
                     </div>
-                </div>
-                <div id="root"></div>
-                <div class="sidebar">
+                </div></div>
+                <div class="col-1"></div>
+                <div class="sidebar col">
                     <?php if (!empty($errorMessage)): ?>
                         <p style="color: red;"><?php echo $errorMessage; ?></p>
                     <?php elseif (empty($cartItems)): ?>
@@ -234,7 +234,7 @@ try {
     <div class="footer-container">
 
         <div class="text">
-            <a href="Navigation_bar.php"><img src="/scrum_project/code/pictures/logo.png" alt="Nature Music"></a>
+            <a href="Navigation_bar.php"><img src="pictures/logo.png" alt="Nature Music"></a>
             <p>Lorem ipsum dolor sit amet consectetur. <br>
             Consequat fermentum viverra auctor nibh <br> eleifend sed lorem. </p>
 
@@ -248,14 +248,14 @@ try {
         </div>
 
         <div class="Pages_content">
-            <h3 class="footerText">Pages</h3>
+            <h3 style="font-size: 20px;">Pages</h3>
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Info</a></p>
             <p><a href="#">Track Location</a></p>
             <p><a href="#">Career</a></p>
         </div>
         <div class="BackLinks_content">
-            <h3 class="footerText">Back Links</h3>
+            <h3 style="font-size: 20px;">Back Links</h3>
             <p><a href="#">Brand</a></p>
             <p><a href="#">Social Links</a></p>
             <p><a href="#">Company Registration</a></p>

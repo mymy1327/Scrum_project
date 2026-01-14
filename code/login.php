@@ -1,13 +1,13 @@
 <?php
 session_start();
- 
+require_once "config.php";
 
+// if logged in, redirect
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: Navigation_bar.php");
+    header("Location: Navigation_bar.php");
     exit;
 }
- 
-require_once "config.php";
+
  
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -31,51 +31,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Start validation
     if(empty($username_err) && empty($password_err)){
-        
         $sql = "SELECT id, username, password FROM users WHERE username = ?";
-        
+
         if($stmt = mysqli_prepare($conn, $sql)){
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             $param_username = $username;
-            
+
             if(mysqli_stmt_execute($stmt)){
                 mysqli_stmt_store_result($stmt);
-                
-                // Check if username exists, if yes then verify password
-                if(mysqli_stmt_num_rows($stmt) == 1){                    
+
+                if(mysqli_stmt_num_rows($stmt) === 1){
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
-                        
-                        // compare the password (ensure hashed password is a string)
                         if(is_string($hashed_password) && password_verify($password, $hashed_password)){
-                            
-                            // start a new session
-                            session_start();
-                            
-                            // restore session data
+                            // create new session
+                            session_regenerate_id(true);
                             $_SESSION["loggedin"] = true;
                             $_SESSION["user_id"] = $id;
-                            $_SESSION["username"] = $username;                            
-                            
-                            // Redirect user to welcome page
-                            header("location: Navigation_bar.php");
+                            $_SESSION["username"] = $username;
+
+                            header("Location: Navigation_bar.php");
+                            exit;
                         } else{
-                            // password is not valid
                             $login_err = "Username or password is incorrect.";
                         }
                     }
                 } else{
-                    // username doesn't exist
                     $login_err = "Username or password is incorrect.";
                 }
             } else{
-                echo "Error. Please try again.";
+                echo "Error executing query. Please try again.";
             }
-
             mysqli_stmt_close($stmt);
         }
     }
-    
     mysqli_close($conn);
 }
 ?>
