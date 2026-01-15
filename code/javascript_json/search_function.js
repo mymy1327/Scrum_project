@@ -74,12 +74,11 @@ const cartIcon = document.getElementById('cart_icon');
         })
         
         function searchProducts(products, query) {
-            return products.filter(product =>
-                product.name.toLowerCase().includes(query) ||
-                product.category?.toLowerCase().includes(query)
-            );
+            return products.filter(product => {
+                const name = product.name.toLowerCase();
+                return name.startsWith(query);
+            });
         }
-
 
         // search for products
         async function handleSearch() {
