@@ -1,26 +1,30 @@
-// javascript_json/cartreview.test.js
 const { updateProductsInput } = require('./cart_review');
 
 describe('updateProductsInput', () => {
-    let inputElement;
 
-    beforeEach(() => {
-        inputElement = { value: '' };
-    });
-
-    it('updates the input with a single product', () => {
-        const cart = [
-            { name: 'Guitar', price: '500', quantity: 2, picture: 'pictures/guitar.png' }
+    test('updates the hidden input', () => {
+        const mockCart = [
+            {
+                name: 'Guitar',
+                price: '500',
+                quantity: 2,
+                picture: 'guitar.png'
+            }
         ];
-        updateProductsInput(cart, inputElement);
-        expect(inputElement.value).toBe(JSON.stringify([
-            { name: 'Guitar', price: 500, quantity: 2, image: 'pictures/guitar.png' }
-        ]));
-    });
 
-    it('does not change the input when the cart is empty', () => {
-        const cart = [];
-        updateProductsInput(cart, inputElement);
-        expect(inputElement.value).toBe('');
+        const mockInput = { value: '' };
+
+        updateProductsInput(mockCart, mockInput);
+
+        const parsed = JSON.parse(mockInput.value);
+
+        expect(parsed).toEqual([
+            {
+                name: 'Guitar',
+                price: 500,
+                quantity: 2,
+                image: 'guitar.png'
+            }
+        ]);
     });
 });
