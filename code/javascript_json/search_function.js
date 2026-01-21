@@ -1,3 +1,10 @@
+// on page load so 'Shop Now' works
+document.addEventListener('DOMContentLoaded', () => {
+    attachAddToCartListeners();
+
+    addToCartSpecial();
+});
+
 async function loadSampleData() {
     if (sampleData.length > 0) return sampleData;
 
