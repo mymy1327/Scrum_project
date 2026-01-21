@@ -167,7 +167,8 @@ try {
                         <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" required>
                     </div>
                 </div>
-        </div> <!-- closes col-md-5 -->
+            
+        </div>
 
         <div class="col-1"></div>
         <div class="sidebar col">
@@ -224,7 +225,7 @@ try {
             <button class='checkout' type="submit" id="Checkout" style="font-size: 17px;">Checkout ➙</button>
         </div>
         </form>
-    </div> <!-- closes container2 row -->
+    </div>
 
     <!-- Footer -->
     <footer>

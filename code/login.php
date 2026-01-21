@@ -92,6 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }        
     ?>
 
+    <!-- Login page -->
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <h1 class="main-text">Login</h1>
 

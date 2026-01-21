@@ -334,7 +334,7 @@ async function renderCategoryCards(itemContainer, filterCategory = null ) {
             </div>
             </div>`;
     })
-    attachAddToCartListeners();;
+    attachAddToCartListeners();
 }
 
 function attachAddToCartListeners() {
@@ -401,7 +401,7 @@ function addToCartSpecial () {
                     notification.classList.remove('show');
                 }, 2000);
             } else {
-                if (response.message?.includes('Require login')) {
+                if (response.message && response.message.includes('Require login')) {
                     notification.innerHTML =
                         'Please <a href="login.php" class="login-link">log in</a> to add items to your cart.';
                 } else {

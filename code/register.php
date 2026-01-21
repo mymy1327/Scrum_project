@@ -85,6 +85,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="icon" href="pictures/logo.png">
   </head>
 <body>
+    <!-- Register page -->
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <h1 class="main-text">Sign Up</h1>
 
