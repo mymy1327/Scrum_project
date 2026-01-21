@@ -7,87 +7,81 @@ session_start();
     //exit;}
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nature Music</title>
     <link rel = "stylesheet" href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=MeaCulpa' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/scrum_project/code/css/nav_bar.css">
     <link rel="stylesheet" href="/scrum_project/code/css/content.css">
     <link rel="stylesheet" href="/scrum_project/code/css/footer.css">
     <!-- Logo shows next to the page title -->
     <link rel="icon" href="pictures/logo.png">
-  </head>
-  <body>
+</head>
+<body>
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
     <!-- Navigation Bar -->
     <div class="welcome_text">
-      <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-        <p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p>
-      <?php else: ?>
-        <p class="welcome">Welcome to Nature Music!</p>
-      <?php endif; ?>
-    </div>
-    <div class="nav_bar_container">
-      <a href="Navigation_bar.php">
-    <img class="logo" src="pictures/logo.png" alt="Logo">
-</a>
-      <div class="search_nav_link_container">
-    <!-- Search bar -->
-      <div class="search-container">
-        <div class="search_bar_form justify-content-center">
-        <input class="search_bar" id="search-input" oninput="handleSearch()" type="text" placeholder="Search">
-        <button class="search_button justify-content-center" id="search-button" onclick="performSearch()"><i class='bx bx-search'></i></button>
-        </div>
-        <div>
-          <ul class="search-results" id="search-results">
-            </ul>
-          <div id="notification" class="notification">
-            Product has been added to cart!
-          </div>
-        </div>
-      </div>
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Navigation_bar.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="deals.php">Deals</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.php">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact Us</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
-              <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
-              <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
-              <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
-              <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
-              <li><a class="dropdown-item" href="studio.php">Studio And Recording</a></li>
-              <li><a class="dropdown-item" href="wind.php">Wind Instruments</a></li>
-            </ul>
-        </li>
-      </ul></div>
-    <!-- Cart and log in -->
-      <div class="cart_login">
-        <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-          <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+            <p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p>
         <?php else: ?>
-        <a href="login.php"><i class='bx bxs-user'></i></a>
+            <p class="welcome">Welcome to Nature Music!</p>
         <?php endif; ?>
-      </div>
     </div>
+
+    <div class="nav_bar_container">
+        <a href="Navigation_bar.php">
+            <img class="logo" src="pictures/logo.png" alt="Logo">
+        </a>
+        <div class="search_nav_link_container">
+            <!-- Search bar -->
+            <div class="search-container">
+                <div class="search_bar_form justify-content-center">
+                    <input class="search_bar" id="search-input" oninput="handleSearch()" type="text" placeholder="Search">
+                    <button class="search_button justify-content-center" id="search-button" onclick="performSearch()"><i class='bx bx-search'></i></button>
+                </div>
+                <div>
+                    <ul class="search-results" id="search-results"></ul>
+                    <div id="notification" class="notification">Product has been added to cart!</div>
+                </div>
+            </div>
+
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="Navigation_bar.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="deals.php">Deals</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
+                        <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
+                        <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
+                        <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
+                        <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
+                        <li><a class="dropdown-item" href="studio.php">Studio And Recording</a></li>
+                        <li><a class="dropdown-item" href="wind.php">Wind Instruments</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Cart and log in -->
+        <div class="cart_login">
+            <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
+            <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
+                <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+            <?php else: ?>
+                <a href="login.php"><i class='bx bxs-user'></i></a>
+            <?php endif; ?>
+        </div>
+    </div>
+
     <!-- Banner -->
     <div class="banner_container">
       <img class="banner_image" src="pictures/image.jpeg" alt="Banner">
@@ -189,7 +183,7 @@ session_start();
           <div class="card add-to-cart-btn" data-name="Red Drums" data-price="2400 €" data-image="/scrum_project/code/pictures/redDrums.png">
             <img src="pictures/redDrums.png" class="card-img-top" alt="red drums">
             <div class="card-body">
-              <h5 class="card-title">Red Pearl Drums</h5>
+              <h3 class="card-title">Red Pearl Drums</h3>
               <p class="card-text">Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä</p>
             </div>
           </div>
@@ -199,7 +193,7 @@ session_start();
           <div class="card add-to-cart-btn" data-name="Electric Guitar" data-price="700 €" data-image="/scrum_project/code/pictures/electricguitar.png">
             <img src="pictures/electricguitar.png" class="card-img-top" alt="electric guitar">
             <div class="card-body">
-              <h5 class="card-title">Electric Guitar</h5>
+              <h3 class="card-title">Electric Guitar</h3>
               <p class="card-text">Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä</p>
             </div>
           </div>
@@ -209,7 +203,7 @@ session_start();
           <div class="card add-to-cart-btn" data-name="Speaker" data-price="1500 €" data-image="/scrum_project/code/pictures/loudspeakers.png">
             <img src="pictures/loudspeakers.png" class="card-img-top" alt="loud speakers">
             <div class="card-body">
-              <h5 class="card-title">Loud Speakers</h5>
+              <h3 class="card-title">Loud Speakers</h3>
               <p class="card-text">Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä Tekstiä</p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "config.php";
+require_once __DIR__ . "/config.php";
 
 // if logged in, redirect
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
@@ -70,9 +70,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
  
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -81,7 +81,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-    <link href="https://fonts.google.com/specimen/Quicksand">
+    <link href="https://fonts.google.com/specimen/Quicksand" rel="stylesheet">
     <link href="/scrum_project/code/css/register.css" rel="stylesheet">
     <link rel="icon" href="pictures/logo.png">
 </head>
@@ -96,13 +96,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h1 class="main-text">Login</h1>
 
         <input class="user-input" type="text" name="username" value="<?php echo $username; ?>" placeholder="Username">
-        <span stlye="opacity: <?php echo $opacity; ?>"><?php echo $username_err; ?></span>
 
         <input class="password-input" type="password" name="password" placeholder="Password">
-        <span stlye="opacity: <?php echo $opacity; ?>"><?php echo $password_err; ?></span>
 
         <button class="submit-button" type="submit" value="sign up" >Login</button>
-        <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+        <p>Don't have an account? <a href="register.php">Sign up now</a>| <a href="Navigation_bar.php"> Main page</a></p>
     </form>
 </body>
 </html>

@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Nature Music</title>
@@ -60,105 +60,70 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <link rel="stylesheet" href="/scrum_project/code/css/footer.css">
       <link rel="stylesheet" href="/scrum_project/code/css/contact.css">
       <link rel="icon" href="pictures/logo.png">
-  </head>
+</head>
 
-  <body>
-      <!-- Overlay -->
-      <div class="overlay" id="overlay"></div>
+<body>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+    <!-- Navigation Bar -->
+    <div class="welcome_text">
+        <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
+            <p class="welcome">Welcome to Nature Music, user <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</p>
+        <?php else: ?>
+            <p class="welcome">Welcome to Nature Music!</p>
+        <?php endif; ?>
+    </div>
 
-      <!-- Navigation Bar -->
-      <div class="welcome_text">
-          <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-              <p class="welcome">
-                  Welcome to Nature Music, user
-                  <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.
-              </p>
-          <?php else: ?>
-              <p class="welcome">Welcome to Nature Music!</p>
-          <?php endif; ?>
-      </div>
+    <div class="nav_bar_container">
+        <a href="Navigation_bar.php">
+            <img class="logo" src="pictures/logo.png" alt="Logo">
+        </a>
+        <div class="search_nav_link_container">
+            <!-- Search bar -->
+            <div class="search-container">
+                <div class="search_bar_form justify-content-center">
+                    <input class="search_bar" id="search-input" oninput="handleSearch()" type="text" placeholder="Search">
+                    <button class="search_button justify-content-center" id="search-button" onclick="performSearch()"><i class='bx bx-search'></i></button>
+                </div>
+                <div>
+                    <ul class="search-results" id="search-results"></ul>
+                    <div id="notification" class="notification">Product has been added to cart!</div>
+                </div>
+            </div>
 
-      <div class="nav_bar_container">
-          <a href="Navigation_bar.php">
-              <img class="logo" src="pictures/logo.png" alt="Logo">
-          </a>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="Navigation_bar.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="deals.php">Deals</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
+                        <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
+                        <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
+                        <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
+                        <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
+                        <li><a class="dropdown-item" href="studio.php">Studio And Recording</a></li>
+                        <li><a class="dropdown-item" href="wind.php">Wind Instruments</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-          <div class="search_nav_link_container">
-              <!-- Search bar -->
-              <div class="search-container">
-                  <div class="search_bar_form justify-content-center">
-                      <input
-                          class="search_bar"
-                          id="search-input"
-                          oninput="handleSearch()"
-                          type="text"
-                          placeholder="Search"
-                      >
-                      <button
-                          class="search_button justify-content-center"
-                          id="search-button"
-                          onclick="performSearch()"
-                      >
-                          <i class="bx bx-search"></i>
-                      </button>
-                  </div>
+        <!-- Cart and log in -->
+        <div class="cart_login">
+            <a href="cart_review.php" id="cart_icon"><i class='bx bxs-cart'></i></a>
+            <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
+                <a href="logout.php"><i class="bx bx-log-out bx-flip-horizontal"></i></a>
+            <?php else: ?>
+                <a href="login.php"><i class='bx bxs-user'></i></a>
+            <?php endif; ?>
+        </div>
+    </div>
+    <!-- Nav ends -->
 
-                  <div>
-                      <ul class="search-results" id="search-results"></ul>
-                      <div id="notification" class="notification">
-                          Product has been added to cart!
-                      </div>
-                  </div>
-              </div>
-
-              <ul class="nav justify-content-center">
-                  <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="Navigation_bar.php">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="deals.php">Deals</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="about.php">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact.php">Contact Us</a>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Category Items</a>
-                      <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="string_instruments.php">String Instruments</a></li>
-                          <li><a class="dropdown-item" href="drums_and_percussion.php">Drums And Percussion</a></li>
-                          <li><a class="dropdown-item" href="keyboards_and_pianos.php">Keyboards And Pianos</a></li>
-                          <li><a class="dropdown-item" href="live_sound.php">Live Sound & Pro Audio</a></li>
-                          <li><a class="dropdown-item" href="home_audio.php">Home Audio</a></li>
-                          <li><a class="dropdown-item" href="studio.php">Studio And Recording</a></li>
-                          <li><a class="dropdown-item" href="wind.php">Wind Instruments</a></li>
-                      </ul>
-                  </li>
-              </ul>
-          </div>
-
-          <!-- Cart and log in -->
-          <div class="cart_login">
-              <a href="cart_review.php" id="cart_icon">
-                  <i class="bx bxs-cart"></i>
-              </a>
-
-              <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
-                  <a href="only_php/logout.php">
-                      <i class="bx bx-log-out bx-flip-horizontal"></i>
-                  </a>
-              <?php else: ?>
-                  <a href="only_php/login.php">
-                      <i class="bx bxs-user"></i>
-                  </a>
-              <?php endif; ?>
-          </div>
-      </div>
-
-      <!-- Contact us page content starts -->
+    <!-- Contact us page content starts -->
 
       <div class="contact_page">
           <div class="contact_details">
@@ -216,11 +181,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </p>
 
               <form action="contact.php" method="POST">
-                  <input type="text" name="first_name" placeholder="Enter your name*" required>
-                  <input type="text" name="last_name" placeholder="Enter your last name*" required>
-                  <input type="email" name="email" placeholder="Enter a valid email adress*" required>
-                  <input type="tel" name="phone" placeholder="Enter your phone number*" required>
-                  <textarea name="message" placeholder="Write your message*" required></textarea>
+                  <input type="text" name="first_name" placeholder="Enter your name" required>
+                  <input type="text" name="last_name" placeholder="Enter your last name" required>
+                  <input type="email" name="email" placeholder="Enter a valid email adress" required>
+                  <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                  <textarea name="message" placeholder="Write your message" required></textarea>
                   <button type="submit">SUBMIT</button>
               </form>
           </div>
@@ -244,7 +209,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </div>
 
               <div class="Pages_content">
-                  <h1 class="footerText">Pages</h3>
+                  <h1 class="footerText">Pages</h1>
                   <p><a href="about.php">About Us</a></p>
                   <p><a href="contact.php">Contact Info</a></p>
                   <p><a href="#">Track Location</a></p>
@@ -252,7 +217,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </div>
 
               <div class="BackLinks_content">
-                  <h2 class="footerText">Back Links</h3>
+                  <h2 class="footerText">Back Links</h2>
                   <p><a href="#">Brand</a></p>
                   <p><a href="#">Social Links</a></p>
                   <p><a href="#">Company Registration</a></p>
