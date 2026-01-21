@@ -115,7 +115,6 @@ session_start();
         <h2 class="special_text">Special</h2>
         <p class="purchase_text">Purchase any guitar over $500 and receive a one hour guitar lesson free.</p>
     </div>
-    
 
     <!-- Instruments categories start -->
     <p class="ensimmainen title edit">SHOP BY CATEGORIES</p>

@@ -447,7 +447,7 @@ body {
     padding-right: 3px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
     /* Navbar */
     .nav_bar_container {
@@ -528,5 +528,14 @@ body {
 
     .special_text {
         font-size: 40px !important;
+    }
+
+    .warranty_container,
+    .line_container {
+        display: none !important;
+    }
+
+    .text-section {
+        margin-bottom: 5% !important;
     }
 }
